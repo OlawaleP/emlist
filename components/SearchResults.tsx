@@ -595,7 +595,8 @@ const SearchResults = ({
                         />
                         <p className="text-[14px] text-[#303632]">Favourite</p>
                       </button>
-                      <button className="flex items-center">
+
+                      <Link href="/compare" className="flex items-center">
                         <Image
                           src={reviews.paperIcon}
                           alt="menu"
@@ -604,7 +605,7 @@ const SearchResults = ({
                           className="object-contain w-[20px] h-[20px] max-sm:w-[16px] max-sm:h-[16px] mr-2"
                         />
                         <p className="text-[14px] text-[#303632] ">Compare</p>
-                      </button>
+                      </Link>
                     </div>
                   </div>
                 </div>

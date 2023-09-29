@@ -17,7 +17,7 @@ const MainNav = () => {
         <ul className=" flex items-center gap-8 max-lg:hidden ">
           <li>
             <Link
-              href="/"
+              href="/register/expert"
               className="bg-primary-green px-[20px] py-[12px] text-[#fcfefd] rounded-[10px] cursor-pointer font-bold font-exo"
             >
               Join as an Expert
@@ -51,7 +51,7 @@ const MainNav = () => {
             alt="menu"
             width={24}
             height={24}
-            className="object-contain"
+            className="object-contain w-[30px] h-[30px]"
           />
         </div>
       </nav>

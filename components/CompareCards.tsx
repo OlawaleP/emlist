@@ -36,7 +36,7 @@ const CompareCards = () => {
                   </h3>
                 </div>
 
-                <Link href="/" className=" py-2 ">
+                <Link href="/experts/details" className=" py-2 ">
                   <button className="px-3 border-[1px] border-[#303632] text-[14px] max-sm:text-[12px] py-1 rounded-[10px]">
                     Contact
                   </button>
