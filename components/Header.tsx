@@ -12,8 +12,8 @@ type Props = {
 
 const Header = ({ currentLink }: Props) => {
   return (
-    <main className=" padding-x pt-28 relative w-full  flex justify-center items-center max-xl:flex-col  gap-10">
-      <div className="flex flex-col flex-1 max-xl:mt-10 w-full max-xl:max-w-[770px]">
+    <main className=" padding-x pt-28 relative w-full grid grid-cols-7   gap-10">
+      <div className="col-span-4 flex flex-col flex-1 max-xl:mt-10 w-full max-xl:px-20 max-md:px-0 max-xl:col-span-7 ">
         <h1 className="font-exo font-[800] text-[48px] text-[#030a05] mr-14 max-xl:text-center max-xl:mr-0 max-sm:text-[30px]">
           Find the perfect workers for your project
         </h1>
@@ -53,7 +53,7 @@ const Header = ({ currentLink }: Props) => {
           {currentLink === 3 && <MaterialSearch />}
         </div>
       </div>
-      <div className=" pt-10 max-xl:pt-0 max-xl:max-w-[770px]">
+      <div className=" pt-10 max-xl:pt-0 max-xl:px-20 max-md:px-0 col-span-3 max-xl:col-span-7 ">
         {currentLink === 2 ? (
           <Image
             src="/assets/images/GroupImg2.svg"
@@ -72,7 +72,7 @@ const Header = ({ currentLink }: Props) => {
           />
         )}
       </div>
-      <div className="xl:hidden">
+      <div className="xl:hidden max-xl:col-span-7">
         <ul className="flex items-center justify-start w-full gap-8 my-5 max-sm:gap-4">
           {landingPageLinks.map((link) => (
             <li key={link.id}>
