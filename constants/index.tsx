@@ -351,3 +351,46 @@ export const jobOptions = [
   { id: 2, label: "Plumber" },
   { id: 3, label: "Painter" },
 ];
+
+export const coverageStates = [
+  {
+    id: 1,
+    state: "Lagos",
+  },
+  {
+    id: 2,
+    state: "Abuja",
+  },
+  {
+    id: 3,
+    state: "Imo",
+  },
+  {
+    id: 4,
+    state: "Benue",
+  },
+  {
+    id: 5,
+    state: "Anambra",
+  },
+  {
+    id: 6,
+    state: "River",
+  },
+  {
+    id: 7,
+    state: "Akwa Ibom",
+  },
+  {
+    id: 8,
+    state: "Cross River",
+  },
+  {
+    id: 9,
+    state: "Adamawa",
+  },
+  {
+    id: 10,
+    state: "Delta",
+  },
+];

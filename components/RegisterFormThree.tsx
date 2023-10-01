@@ -108,12 +108,12 @@ const RegisterFormThree = () => {
                       Try to use a solid background
                     </li>
                   </ul>
-                  <div className="">
+                  <div className=" w-full">
                     <Image
                       src="/assets/images/uploadguide.svg"
                       alt="upload"
-                      width={30}
-                      height={30}
+                      width={88}
+                      height={88}
                       className="object-cover w-full h-full "
                     />
                   </div>

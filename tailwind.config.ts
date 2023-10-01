@@ -17,6 +17,7 @@ module.exports = {
       },
       backgroundImage: {
         "become-expert-banner": "url('/assets/images/banner.svg')",
+        "congrats-banner": "url('/assets/images/congrats.svg')",
         "footer-texture": "url('/img/footer-texture.png')",
       },
     },
