@@ -53,14 +53,14 @@ const Header = ({ currentLink }: Props) => {
           {currentLink === 3 && <MaterialSearch />}
         </div>
       </div>
-      <div className=" pt-10 max-xl:pt-0 max-xl:px-20 max-md:px-0 col-span-3 max-xl:col-span-7 ">
+      <div className=" pt-10 max-xl:pt-0 max-xl:px-20 max-md:px-0 col-span-3 max-xl:col-span-7 w-full">
         {currentLink === 2 ? (
           <Image
             src="/assets/images/GroupImg2.svg"
             alt="menu"
             width={700}
             height={60}
-            className="object-contain w-full"
+            className="object-contain w-full h-full"
           />
         ) : (
           <Image
@@ -68,7 +68,7 @@ const Header = ({ currentLink }: Props) => {
             alt="menu"
             width={700}
             height={60}
-            className="object-contain w-full"
+            className="object-contain w-full h-full"
           />
         )}
       </div>
