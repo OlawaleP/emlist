@@ -345,3 +345,9 @@ export const expertise = [
   "Map based tracking, GPS, Core data",
   "Calendar based app",
 ];
+
+export const jobOptions = [
+  { id: 1, label: "Bricklayer" },
+  { id: 2, label: "Plumber" },
+  { id: 3, label: "Painter" },
+];

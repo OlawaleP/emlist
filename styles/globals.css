@@ -24,11 +24,11 @@
   }
 
   .padding-l {
-    @apply xl:pl-[8rem] lg:pl-[4rem] sm:pl-[2rem] pl-2;
+    @apply xl:pl-[8rem] lg:pl-[4rem] sm:pl-[2rem] pl-3;
   }
 
   .padding-x {
-    @apply xl:px-[8rem] lg:px-[4rem] sm:px-[2rem] px-2;
+    @apply xl:px-[8rem] lg:px-[4rem] sm:px-[2rem] px-3;
   }
 
   .padding-y {
