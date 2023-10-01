@@ -2,8 +2,8 @@ import Link from "next/link";
 
 const RegistrationGuide = () => {
   return (
-    <div className="pt-24 h-[100vh] bg-[#054753]  w-[500px] max-md:w-full">
-      <div className="padding-y pr-8">
+    <div className="pt-24 h-vh bg-[#054753]  w-[500px] max-md:w-full pb-24 ">
+      <div className="padding-y pr-8 max-sm:mt-10">
         <h1 className="text-[#fefcfd] font-[700] text-[30px] leading-[36px] padding-l max-sm:text-[18px]">
           Grow your business with Emilist
         </h1>
@@ -57,10 +57,10 @@ const RegistrationGuide = () => {
             </div>
           </div>
         </div>
-        <div className="w-full flex items-center justify-center  mt-10 ">
+        <div className="w-full flex items-center justify-center  mt-10 max-sm:pt max-md:mt-28">
           <Link
             href="#registrationform1"
-            className="bg-primary-green px-[18px] py-[10px] text-[#fcfefd] rounded-[10px] cursor-pointer font-bold  mt-15 whitespace-nowrap  text-[14px] max-lg:mt-0 max-sm:text-[11px] max-sm:px-[20px] max-sm:py-[10px] md:hidden"
+            className="bg-primary-green px-[18px] py-[10px] text-[#fcfefd] rounded-[10px] cursor-pointer font-bold  mt-15 whitespace-nowrap  text-[14px] max-lg:mt-0 max-sm:text-[11px] max-sm:px-[20px] max-sm:py-[6px] md:hidden"
           >
             Proceed
           </Link>

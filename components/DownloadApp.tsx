@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const DownloadApp = () => {
   return (
@@ -27,20 +28,26 @@ const DownloadApp = () => {
             GET THE APP
           </h6>
           <div className="flex">
-            <Image
-              src="/assets/icons/Group3.svg"
-              alt="logo"
-              width={169}
-              height={49}
-              className="object-cover w-[169px] max-md:w-[130px] rounded-lg h-[49px] max-md:h-[40px] mr-4 max-sm:mr-2"
-            />
-            <Image
-              src="/assets/icons/Group4.svg"
-              alt="logo"
-              width={169}
-              height={49}
-              className="object-cover  w-[169px] max-md:w-[130px] rounded-lg h-[49px] max-md:h-[40px]"
-            />
+            <Link href="/">
+              {" "}
+              <Image
+                src="/assets/icons/Group3.svg"
+                alt="logo"
+                width={169}
+                height={49}
+                className="object-cover w-[169px] max-md:w-[130px] rounded-lg h-[49px] max-md:h-[40px] mr-4 max-sm:mr-2"
+              />
+            </Link>
+
+            <Link href="/">
+              <Image
+                src="/assets/icons/Group4.svg"
+                alt="logo"
+                width={169}
+                height={49}
+                className="object-cover  w-[169px] max-md:w-[130px] rounded-lg h-[49px] max-md:h-[40px]"
+              />
+            </Link>
           </div>
         </div>
         <div className="flex-1 relative max-xl:hidden">
