@@ -52,7 +52,7 @@ const ImageSlider = ({ material }: Props) => {
             />
           </button>
           <button
-            className="absolute top-[50%] translate-y-[-50%] -right-2 max-xl:-right-8 bg-white shadow-md rounded-full w-[68px] h-[68px] max-sm:w-[37px] max-sm:h-[37px] flex items-center justify-center max-sm:-right-2"
+            className="absolute top-[50%] translate-y-[-50%] right-7 max-xl:-right-8 bg-white shadow-md rounded-full w-[68px] h-[68px] max-sm:w-[37px] max-sm:h-[37px] flex items-center justify-center max-sm:-right-2"
             onClick={nextImg}
           >
             <Image

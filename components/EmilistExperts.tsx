@@ -88,7 +88,7 @@ const EmilistExperts = () => {
             veniam consequat sunt nostrud amet.
           </p>
           <div className="w-full flex max-xl:justify-center">
-            <Link href="/">
+            <Link href="/become-expert">
               <button className="bg-primary-green px-[18px] py-[10px] text-[#fcfefd] rounded-[10px] cursor-pointer font-bold font-exo mt-5 w-[138px] ">
                 Get Started
               </button>

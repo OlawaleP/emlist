@@ -17,7 +17,7 @@ const Header = ({ currentLink }: Props) => {
         <h1 className="font-exo font-[800] text-[48px] text-[#030a05] mr-14 max-xl:text-center max-xl:mr-0 max-sm:text-[30px]">
           Find the perfect workers for your project
         </h1>
-        <p className="font-exo font-[400] text-base text-[303632] mr-14 my-6 max-xl:text-center max-xl:mr-0">
+        <p className="font-[400] text-base text-[303632] mr-14 my-6 max-xl:text-center max-xl:mr-0">
           Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
           sint. Velit officia consequat duis enimt.
         </p>
@@ -46,7 +46,7 @@ const Header = ({ currentLink }: Props) => {
                 Meet new customers, Sign up to start growing your business
               </p>
               <button className="bg-primary-green px-[34px] py-[15px] text-[#fcfefd] rounded-[10px] cursor-pointer font-bold font-exo mt-5">
-                <Link href="/">Get Started</Link>
+                <Link href="/register/expert">Get Started</Link>
               </button>
             </div>
           )}
@@ -58,16 +58,16 @@ const Header = ({ currentLink }: Props) => {
           <Image
             src="/assets/images/GroupImg2.svg"
             alt="menu"
-            width={700}
-            height={60}
+            width={773}
+            height={67}
             className="object-contain w-full h-full"
           />
         ) : (
           <Image
             src="/assets/images/GroupImg.svg"
             alt="menu"
-            width={700}
-            height={60}
+            width={773}
+            height={67}
             className="object-contain w-full h-full"
           />
         )}

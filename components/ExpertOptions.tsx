@@ -10,10 +10,10 @@ const ExpertOptions = () => {
         </h4>
         <div className="flex-1">
           <Image
-            src="/assets/images/Frame2.svg"
+            src="/assets/images/Frame2.jpg"
             alt="logo"
-            width={20}
-            height={20}
+            width={610}
+            height={340}
             className="object-cover w-[610px] h-[340px] rounded-[20px] max-sm:w-full max-sm:h-[220px] max-sm:rounded-[10px]"
           />
         </div>
@@ -21,7 +21,7 @@ const ExpertOptions = () => {
           <h4 className="text-[30px] font-[700] text-[#000] max-sm:text-[18px] max-md:hidden">
             Investigator
           </h4>
-          <p className=" text-[#030a05] text-base font-[500]  max-sm:text-[14px]  max-md:text-center">
+          <p className=" text-[#303632] text-base font-[400]  max-sm:text-[14px]  max-md:text-center">
             Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
             sint. Velit officia consequat duis enim velit mollit. Exercitation
             veniam consequat sunt nostrud amet.Amet minim mollit non deserunt
@@ -45,10 +45,10 @@ const ExpertOptions = () => {
         </h4>
         <div className="flex-1">
           <Image
-            src="/assets/images/Frame6.svg"
+            src="/assets/images/Frame6.png"
             alt="logo"
-            width={20}
-            height={20}
+            width={610}
+            height={340}
             className="object-cover w-[610px] h-[340px] rounded-[20px] max-sm:w-full max-sm:h-[220px] max-sm:rounded-[10px]"
           />
         </div>
@@ -56,7 +56,7 @@ const ExpertOptions = () => {
           <h4 className="text-[30px] font-[700] text-[#000] max-sm:text-[18px] max-md:hidden">
             Supervisor
           </h4>
-          <p className=" text-[#030a05] text-base font-[500]  max-sm:text-[14px]  max-md:text-center">
+          <p className=" text-[#303632] text-base font-[400]  max-sm:text-[14px]  max-md:text-center">
             Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
             sint. Velit officia consequat duis enim velit mollit. Exercitation
             veniam consequat sunt nostrud amet.Amet minim mollit non deserunt
@@ -80,10 +80,10 @@ const ExpertOptions = () => {
         </h4>
         <div className="flex-1">
           <Image
-            src="/assets/images/Frame3.svg"
+            src="/assets/images/Frame3.png"
             alt="logo"
-            width={20}
-            height={20}
+            width={610}
+            height={340}
             className="object-cover w-[610px] h-[340px] rounded-[20px] max-sm:w-full max-sm:h-[220px] max-sm:rounded-[10px]"
           />
         </div>
@@ -91,7 +91,7 @@ const ExpertOptions = () => {
           <h4 className="text-[30px] font-[700] text-[#000] max-sm:text-[18px] max-md:hidden">
             Project Manager
           </h4>
-          <p className=" text-[#030a05] text-base font-[500]  max-sm:text-[14px]  max-md:text-center">
+          <p className=" text-[#303632] text-base font-[400]  max-sm:text-[14px]  max-md:text-center">
             Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
             sint. Velit officia consequat duis enim velit mollit. Exercitation
             veniam consequat sunt nostrud amet.Amet minim mollit non deserunt

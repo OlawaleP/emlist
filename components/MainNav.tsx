@@ -1,7 +1,15 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
+import { useState } from "react";
+import ExploreEmilistModal from "./ExploreEmilistModal";
 
 const MainNav = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const onCancel = () => {
+    setIsOpen(false);
+  };
   return (
     <header className=" py-8 z-10 w-full fixed bg-white max-lg:shadow-lg">
       <nav className="flex justify-between items-center  padding-x">
@@ -26,8 +34,8 @@ const MainNav = () => {
           <li className=" text-[#030a05] text-base font-[500]   ">
             <Link href="/">List New Job</Link>
           </li>
-          <li className=" text-[#030a05] text-base font-[500]   ">
-            <p className="flex items-center">
+          <li className=" text-[#030a05] text-base font-[500] cursor-pointer ">
+            <p className="flex items-center" onClick={() => setIsOpen(true)}>
               Explore Emilist{" "}
               <Image
                 src="/assets/icons/arrow-down.svg"
@@ -37,12 +45,13 @@ const MainNav = () => {
                 className="object-contain ml-2"
               />
             </p>
+            <ExploreEmilistModal isOpen={isOpen} onCancel={onCancel} />
           </li>
           <li className=" text-[#030a05] text-base font-[500]   ">
-            <Link href="/">Log in</Link>
+            <Link href="/login">Log in</Link>
           </li>
           <li className=" text-[#030a05] text-base font-[500]   ">
-            <Link href="/">Sign up</Link>
+            <Link href="/sign-up">Sign up</Link>
           </li>
         </ul>
         <div className="hidden max-lg:block">

@@ -22,7 +22,6 @@ const CatalogSearch = ({ title }: Props) => {
           />
         </form>
       </div>
-
       <div className="flex items-center max-md:flex-col max-lg:items-start max-lg:max-w-[770px] w-full gap-10 max-lg:gap-2">
         <div className="flex-1">
           <p className="text-[#303632] text-[16px] leading-[24px] font-[400] mb-3  max-sm:text-[14px] max-sm:leading-[20px] ">

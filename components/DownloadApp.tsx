@@ -17,7 +17,7 @@ const DownloadApp = () => {
 
           <div className="xl:hidden flex justify-center">
             <Image
-              src="/assets/images/phone.svg"
+              src="/assets/images/phone.png"
               alt="logo"
               width={354}
               height={372}
@@ -52,7 +52,7 @@ const DownloadApp = () => {
         </div>
         <div className="flex-1 relative max-xl:hidden">
           <Image
-            src="/assets/images/phone.svg"
+            src="/assets/images/phone.png"
             alt="logo"
             width={700}
             height={500}
