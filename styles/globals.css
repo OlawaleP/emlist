@@ -24,11 +24,11 @@
   }
 
   .padding-l {
-    @apply xl:pl-[8rem] lg:pl-[4rem] sm:pl-[2rem] pl-3;
+    @apply xl:pl-[6rem] lg:pl-[4rem] sm:pl-[2rem] pl-3;
   }
 
   .padding-x {
-    @apply xl:px-[8rem] lg:px-[4rem] sm:px-[2rem] px-3;
+    @apply xl:px-[6rem] lg:px-[4rem] sm:px-[2rem] px-3;
   }
 
   .padding-y {
@@ -37,7 +37,7 @@
 }
 
 ::-webkit-scrollbar {
-  width: 1px;
+  width: 0px;
   height: 0px;
 }
 
@@ -55,14 +55,13 @@
 }
 
 select {
-  appearance: none; /* Hide the default arrow in some browsers */
-  -webkit-appearance: none; /* Hide the default arrow in WebKit browsers */
-  -moz-appearance: none; /* Hide the default arrow in Firefox */
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
   background-image: url("/assets/icons/arrow-down.svg");
   background-repeat: no-repeat;
-  background-position: right center; /* Adjust the padding and arrow position */
+  background-position: right center;
   padding-right: 40px;
-  /* Adjust the padding to make space for the arrow */
 }
 
 input[type="number"]::-webkit-inner-spin-button,
@@ -77,6 +76,10 @@ input[type="range"]::-webkit-slider-thumb {
   border-radius: 50%;
   -webkit-appearance: none;
   @apply bg-primary-green;
+}
+
+.ant-modal-footer {
+  display: none;
 }
 
 /* input[type="range"] {

@@ -394,3 +394,127 @@ export const coverageStates = [
     state: "Delta",
   },
 ];
+
+export const dashboardMsgProfiles = [
+  {
+    profile: "/assets/images/profile6.svg",
+    firstName: "Ignatio ",
+    lastName: "Adamson",
+  },
+  {
+    profile: "",
+    firstName: "Imokedu",
+    lastName: "Christine",
+  },
+  {
+    profile: "/assets/images/profile4.svg",
+    firstName: "Harry ",
+    lastName: "Kanen",
+  },
+];
+
+export const dashboardLinks = [
+  { id: 1, name: "customers", link: "/dashboard/customers" },
+
+  {
+    id: 2,
+    name: "experts",
+    link: "/dashboard/experts",
+  },
+
+  {
+    id: 3,
+    name: "materials",
+    link: "/dashboard/materials",
+  },
+  {
+    id: 4,
+    name: "lead",
+    link: "/dashboard/lead",
+  },
+];
+
+export const ProjectLinks = [
+  { id: 1, name: "new", link: "/project/new" },
+
+  {
+    id: 2,
+    name: "active projects",
+    link: "/project/active",
+  },
+
+  {
+    id: 3,
+    name: "overdue projects",
+    link: "/project/overdue",
+  },
+  {
+    id: 4,
+    name: "paused projects",
+    link: "/project/paused",
+  },
+  {
+    id: 5,
+    name: "completed projects",
+    link: "/project/completed",
+  },
+];
+
+export const JobLinks = [
+  { id: 1, name: "lead", link: "/job/lead" },
+  { id: 2, name: "new", link: "/job/new" },
+
+  {
+    id: 3,
+    name: "active jobs",
+    link: "/job/active",
+  },
+
+  {
+    id: 4,
+    name: "overdue jobs",
+    link: "/job/overdue",
+  },
+  {
+    id: 5,
+    name: "paused jobs",
+    link: "/job/paused",
+  },
+  {
+    id: 6,
+    name: "completed jobs",
+    link: "/job/completed",
+  },
+];
+
+export const dashboardServices = [
+  {
+    title: "Interior painter for a 3bed room flat",
+    location: "Lagos, Nigeria",
+  },
+  {
+    title: "Room flat",
+    location: "Abuja, Nigeria",
+  },
+  {
+    title: "Load Carrier",
+    location: "Rivers, Nigeria",
+  },
+];
+
+export const certificatesDetails = [
+  {
+    certificateURL: "/assets/images/certificate1.png",
+    issuingOrg: "Painters Association of Nigeria",
+    verificationNumber: "1234567890",
+    issuingDate: "12/01/2009",
+    expiringDate: "none",
+  },
+  {
+    certificateURL: "/assets/images/certificate2.jpg",
+    issuingOrg: "Painters Leaders of Nigeria",
+    verificationNumber: "1234567890",
+    issuingDate: "12/01/2009",
+    expiringDate: "none",
+  },
+];

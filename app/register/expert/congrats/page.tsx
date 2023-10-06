@@ -18,7 +18,7 @@ const page = () => {
               Set up another service
             </button>
             <Link
-              href="/dashboard"
+              href="/dashboard/customers"
               className="bg-primary-green text-center px-[18px] py-[10px] text-[#fcfefd] rounded-[10px] cursor-pointer font-bold  mt-15 whitespace-nowrap  text-[14px] max-lg:mt-0 max-sm:text-[11px] max-sm:px-[20px] max-sm:py-[10px]"
             >
               Proceed to Dashboard
