@@ -21,7 +21,10 @@ const RegisterFormOne = () => {
     <section className="">
       <div className="flex max-md:flex-col">
         <RegistrationGuide />
-        <div id="registrationform1" className="pt-28 max-md:pt-10 max-md:pb-15">
+        <div
+          id="registrationform1"
+          className="pt-28 max-md:pt-10 max-md:pb-15 "
+        >
           <div className="max-w-[550px] mx-10 mt-20 max-md:mt-10 max-sm:mx-4">
             <h1 className="text-[30px] font-bold leading-[36px] max-sm:text-[20px]">
               Get New jobs near you

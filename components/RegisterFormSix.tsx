@@ -88,7 +88,7 @@ const RegisterFormSix = () => {
                           className="object-cover w-full h-full "
                         />
                       )}
-                      <div className="absolute bottom-0 right-0 bg-primary-green p-2">
+                      <div className="absolute bottom-0 right-0 bg-primary-green p-2 cursor-pointer">
                         <Image
                           src="/assets/icons/close-square.svg"
                           alt="arrow-left"

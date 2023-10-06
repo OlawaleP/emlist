@@ -27,12 +27,14 @@ const RegisterFormNine = () => {
                   <Image
                     src="/assets/images/map.svg"
                     alt="upload"
-                    width={30}
-                    height={30}
+                    width={768}
+                    height={253}
                     className="object-cover w-full h-full min-h-[180px]"
                   />
                 </div>
-                <div className="flex mt-6 max-md:justify-center">
+              </div>
+              <div className="col-span-4">
+                <div className="flex  max-md:justify-center">
                   <p className="bg-[#DDFBE9] px-10 py-3 rounded-[20px] cursor-pointer text-[#303632] font-[500] max-sm:text-[12px] max-sm:leading-[16px">
                     Select distance | 50 miles
                   </p>
