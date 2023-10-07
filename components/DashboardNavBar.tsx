@@ -208,7 +208,7 @@ const DashboardNavBar = () => {
                         </li>
                       </Link>
                       <Link
-                        href="/service/not-completed"
+                        href="/post-product"
                         onClick={handleMaterialDropDown}
                       >
                         <li className="text-[#303632] text-[16px] font-[400] capitalize hover:text-primary-green">
@@ -216,7 +216,7 @@ const DashboardNavBar = () => {
                         </li>
                       </Link>
                       <Link
-                        href="/service/not-completed"
+                        href="/materials/saved"
                         onClick={handleMaterialDropDown}
                       >
                         <li className="text-[#303632] text-[16px] font-[400] capitalize hover:text-primary-green">
