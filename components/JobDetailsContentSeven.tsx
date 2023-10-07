@@ -1,7 +1,6 @@
-import { dashboardServices, fourColorStar } from "@constants";
+import { dashboardServices } from "@constants";
 import { numberWithCommas } from "@helpers/helperFunctions";
 import Image from "next/image";
-import Link from "next/link";
 
 const JobDetailsContentSeven = () => {
   return (

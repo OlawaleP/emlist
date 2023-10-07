@@ -1,5 +1,6 @@
-import { Image, Modal } from "antd";
+import { Modal } from "antd";
 import Link from "next/link";
+import Image from "next/image";
 
 type Props = {
   isOpen: boolean;

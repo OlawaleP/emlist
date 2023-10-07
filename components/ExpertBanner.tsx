@@ -1,5 +1,3 @@
-import React from "react";
-
 const ExpertBanner = () => {
   return (
     <section className="pt-28 max-lg:pt-24">

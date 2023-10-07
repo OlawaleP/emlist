@@ -1,4 +1,3 @@
-import React from "react";
 import ProjectSummaryCards from "./ProjectSummaryCards";
 import ProjectToggle from "./ProjectToggle";
 import PausedProjectContent from "./PausedProjectContent";

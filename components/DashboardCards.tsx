@@ -3,7 +3,7 @@
 import { dashboardMsgProfiles } from "@constants";
 import Image from "next/image";
 import Link from "next/link";
-import React, { useState } from "react";
+import { useState } from "react";
 
 const DashboardCards = () => {
   const currentDate = new Date();

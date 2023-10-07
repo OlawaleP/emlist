@@ -3,14 +3,11 @@
 import {
   fourColorStar,
   oneColorStar,
-  reviewMaterials,
-  reviewWorkers,
   threeColorStar,
   twoColorStar,
 } from "@constants";
-import { numberWithCommas } from "@helpers/helperFunctions";
 import Image from "next/image";
-import Link from "next/link";
+
 import { useState, useRef, useEffect } from "react";
 import MaterialsData from "./MaterialsData";
 
