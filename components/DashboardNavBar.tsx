@@ -200,7 +200,7 @@ const DashboardNavBar = () => {
                   <div className="absolute w-[200px] left-0 bottom-[-10rem] rounded-[10px] bg-white px-4 py-6 border-[1px]">
                     <ul className="flex flex-col gap-3 w-full ">
                       <Link
-                        href="/service/details"
+                        href="/materials/all-listed"
                         onClick={handleMaterialDropDown}
                       >
                         <li className="text-[#303632] text-[16px] font-[400] capitalize hover:text-primary-green">
