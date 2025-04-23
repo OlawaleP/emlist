@@ -1,36 +1,47 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Emilist
 
-## Getting Started
+Emilist is a all in one project management platform built with Next.js 14.0.4 (App Router) and TypeScript, enabling users to post and find jobs, manage projects, post and buy materials, communicate via a message center, and access services and cart functionalities. The application is optimized for SEO, performance, and accessibility, using Tailwind CSS, Shadcn/UI, and DaisyUI for styling, Axios for external API requests, and Atomic Design for modular UI components.
 
-First, run the development server:
+## Table of Contents
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- [Features](#features)
+- [Tech Stack](#tech-stack)
+- [Project Structure](#project-structure)
+- [Getting Started](#getting-started)
+  - [Prerequisites](#prerequisites)
+  - [Installation](#installation)
+  - [Environment Variables](#environment-variables)
+  - [Running the App](#running-the-app)
+- [SEO Optimizations](#seo-optimizations)
+- [Contributing](#contributing)
+- [License](#license)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Features
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Emilist offers a robust set of features within a dashboard and public landing pages:
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- **Jobs**: Post, view, edit, and delete jobs (Direct, Regular, Biddable, Reoccurring). View all jobs, user-applied jobs, user-uploaded jobs, and saved jobs.
+- **Projects**: Manage projects created when a user is accepted for a job. View all projects or by ID.
+- **Materials**: Upload, view (self-uploaded or others), and like materials. View all materials or user-uploaded materials.
+- **Messages**: Communicate via a message center.
+- **Cart**: Manage cart-related functionality.
+- **Services**: Upload, edit, and view services.
+- **Dashboard**: Centralized hub for all features.
+- **Landing Pages**: Public-facing pages for marketing and user onboarding.
+- **Custom UI**: Reusable Modal, Toast, Tooltip, and InfoCard components styled with Tailwind, Shadcn/UI, and DaisyUI.
 
-## Learn More
+## Tech Stack
 
-To learn more about Next.js, take a look at the following resources:
+- **Framework**: Next.js 14.0.4 (App Router)
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS, Shadcn/UI, DaisyUI
+- **API Requests**: Axios
+- **Component Architecture**: Atomic Design (Atoms, Molecules, Organisms, Templates)
+- **State Management**: React Context
+- **SEO**: Next.js Metadata API, Structured Data (JSON-LD), Sitemap
+- **Fonts**: Google Fonts (Inter and exo)
+- **Formatting**: Prettier
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Project Structure
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+The project is organized for modularity, scalability, and maintainability, with no `src` folder:
