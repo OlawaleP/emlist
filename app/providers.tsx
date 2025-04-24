@@ -1,7 +1,14 @@
 "use client";
 
-const providers = () => {
-  return <div>providers</div>;
+import AuthState from "@/lib/context/AuthState";
+import CartState from "@/lib/context/CartState";
+
+const Providers = ({ children }: { children: React.ReactNode }) => {
+  return (
+    <CartState>
+      <AuthState>{children}</AuthState>
+    </CartState>
+  );
 };
 
-export default providers;
+export default Providers;

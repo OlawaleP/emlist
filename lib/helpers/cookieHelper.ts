@@ -19,7 +19,7 @@ export const readAuthCookie = (cookieName: string): any => {
   return cookies.get(cookieName);
 };
 
-export const clearAuthClear = (cookieName: string): void => {
+export const clearCookie = (cookieName: string): void => {
   const cookies = new Cookies();
   cookies.remove(cookieName, { path: "/" });
 };

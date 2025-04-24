@@ -1,11 +1,11 @@
-import { LayoutType } from "@/lib/types";
+import { LayoutType } from "@/types";
 
-import Navbar from "../organisms/Navbar";
+import MainNav from "../organisms/MainNav";
 
 const MainLayout = ({ children }: LayoutType) => {
   return (
     <div className="min-h-screen w-full relative">
-      <Navbar />
+      <MainNav />
       {children}
     </div>
   );

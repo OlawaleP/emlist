@@ -1,0 +1,76 @@
+"use client";
+
+import { createContext, useCallback, useEffect, useState } from "react";
+
+import { getCart } from "@/features/cart/api/getCart";
+import { Toast } from "@/components/atoms/Toast";
+import { readAuthCookie } from "../helpers/cookieHelper";
+import { useToast } from "../hooks/useToast";
+
+import GeneralSpinner from "@/components/atoms/GeneralSpinner";
+
+export const CartContext = createContext<any>(null);
+
+type Props = {
+  children: React.ReactNode;
+};
+
+const CartState = ({ children }: Props) => {
+  const token = readAuthCookie("sessionId");
+  const { showToast } = useToast("cart-toast");
+
+  const [loading, setLoading] = useState(true);
+  const [cartItems, setCartItems] = useState([]);
+  const [totalCartQuantity, setTotalCartQuantity] = useState(0);
+
+  const fetchCart = useCallback(async () => {
+    try {
+      const cart: any = await getCart();
+      const totalQuantity = cart?.products.reduce(
+        (sum: number, product: any) => sum + product.quantity,
+        0
+      );
+      setTotalCartQuantity(totalQuantity);
+      setCartItems(cart);
+    } catch (error) {
+      showToast({
+        message: error instanceof Error ? error.message : "Error fetching cart",
+        type: "error",
+        duration: 5000,
+        autoClose: true,
+      });
+    } finally {
+      setLoading(false);
+    }
+  }, [showToast]);
+
+  useEffect(() => {
+    if (token) {
+      getCart();
+    } else {
+      setLoading(false);
+    }
+  }, [fetchCart]);
+
+  const refreshCart = useCallback(async () => {
+    if (token) {
+      await fetchCart();
+    }
+  }, [fetchCart]);
+
+  const value = {
+    cartItems,
+    setCartItems,
+    totalCartQuantity,
+    refreshCart,
+  };
+
+  return (
+    <CartContext.Provider value={value}>
+      <Toast id="cart-toast" />
+      {loading ? <GeneralSpinner /> : children}
+    </CartContext.Provider>
+  );
+};
+
+export default CartState;
