@@ -28,7 +28,7 @@ const MainNav = () => {
   return (
     <div>
       <Navbar toggle={toggle} />
-      <div className="pt-16">
+      <div className="pt-20">
         <div className="relative border-t-1 w-full lg:hidden gap-2">
           <button
             className="padding-ctn flex items-center gap-1"
