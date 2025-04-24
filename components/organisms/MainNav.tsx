@@ -3,7 +3,7 @@
 import dynamic from "next/dynamic";
 import { useState } from "react";
 
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence } from "framer-motion";
 
 import Navbar from "./Navbar";
 import ArrowDownIcon from "../atoms/ArrowDownIcon";
@@ -24,9 +24,10 @@ const MainNav = () => {
     setMenu((prev) => !prev);
     setOpenSideBar(false);
   };
+
   return (
     <div>
-      <Navbar toggle={toggle} toggleMenu={toggleMenu} menu={menu} />
+      <Navbar toggle={toggle} />
       <div className="pt-16">
         <div className="relative border-t-1 w-full lg:hidden gap-2">
           <button

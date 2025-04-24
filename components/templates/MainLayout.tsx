@@ -6,7 +6,7 @@ const MainLayout = ({ children }: LayoutType) => {
   return (
     <div className="min-h-screen w-full relative">
       <MainNav />
-      {children}
+      <main>{children}</main>
     </div>
   );
 };
