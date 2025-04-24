@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 
 import "../styles/globals.css";
 
+import Providers from "./providers";
+
 export const metadata: Metadata = {
   title: "Emilist",
   applicationName: "Emilist",
@@ -71,7 +73,9 @@ export default function RootLayout({
     <html lang="en">
       <body className="app">
         <div className="text-yellow-400 bg-yellow-100 text-green-400 bg-green-100 text-red-400 bg-red-100 text-[#FF5D7A] bg-[#FFF1F2]" />
-        <div className="">{children}</div>
+        <Providers>
+          <div className="">{children}</div>
+        </Providers>
       </body>
     </html>
   );
