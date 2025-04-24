@@ -31,7 +31,7 @@ const Navbar = ({ toggle, toggleMenu, menu }: NavbarProps) => {
   return (
     <header className="w-full">
       <div
-        className={`fixed w-full padding-ctn py-4 flex-c-b backdrop-blur-xl transition-transform duration-700 z-50 ${
+        className={`fixed w-full padding-ctn py-4 flex-c-b backdrop-blur-xl transition-transform duration-700 z-10 ${
           visible ? "translate-y-0" : "-translate-y-full"
         } ${isHeightGreaterThanScreen && "shadow"}`}
       >

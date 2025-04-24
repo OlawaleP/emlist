@@ -4,7 +4,7 @@ interface HamburgerIconProps {
 
 const HamburgerIcon = ({ toggle }: HamburgerIconProps) => {
   return (
-    <button className="block text-xl" onClick={toggle}>
+    <button className="block text-xl pb-2" onClick={toggle}>
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"

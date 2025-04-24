@@ -1,8 +1,15 @@
 "use client";
 
+import dynamic from "next/dynamic";
 import { useState } from "react";
 
+import { AnimatePresence, motion } from "framer-motion";
+
 import Navbar from "./Navbar";
+import ArrowDownIcon from "../atoms/ArrowDownIcon";
+
+const MenuItems = dynamic(() => import("../organisms/MenuItems"));
+const Sidebar = dynamic(() => import("../organisms/Sidebar"));
 
 const MainNav = () => {
   const [menu, setMenu] = useState(false);
@@ -20,6 +27,25 @@ const MainNav = () => {
   return (
     <div>
       <Navbar toggle={toggle} toggleMenu={toggleMenu} menu={menu} />
+      <div className="pt-16">
+        <div className="relative border-t-1 w-full lg:hidden gap-2">
+          <button
+            className="padding-ctn flex items-center gap-1"
+            onClick={toggleMenu}
+          >
+            Explore Emilist
+            <ArrowDownIcon
+              className={`w-4 h-4 transform transition-transform duration-200 ${
+                menu ? "rotate-180" : ""
+              }`}
+            />
+          </button>
+          <AnimatePresence>{menu && <MenuItems />}</AnimatePresence>
+        </div>
+      </div>
+      <AnimatePresence>
+        {openSideBar && <Sidebar toggle={toggle} />}
+      </AnimatePresence>
     </div>
   );
 };
