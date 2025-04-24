@@ -12,15 +12,12 @@ import NavItem from "../molecules/NavItem";
 import CartIcon from "../atoms/CartIcon";
 import HamburgerIcon from "../atoms/HamburgerIcon";
 
-const currentUser = true;
 interface NavbarProps {
   toggle: () => void;
-  toggleMenu: () => void;
-  menu: boolean;
 }
 
-const Navbar = ({ toggle, toggleMenu, menu }: NavbarProps) => {
-  //   const { currentUser } = useContext(AuthContext);
+const Navbar = ({ toggle }: NavbarProps) => {
+  const { currentUser } = useContext(AuthContext);
   const { visible, isHeightGreaterThanScreen } = useNavbarScroll();
   const [isMegaMenuOpen, setIsMegaMenuOpen] = useState(false);
 
