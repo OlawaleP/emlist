@@ -19,9 +19,9 @@ const HomeFeatureLinks = () => {
               initial="hidden"
               animate="show"
               key={data?.id}
-              className="max-w-48 w-48 min-w-48 border-1 border-gray-300 rounded-lg p-4  justify-center gap-4 hover:bg-gray-100 transition-all duration-300"
+              className="max-w-48 bg-white w-48 min-w-48 border-1 border-gray-300 rounded-lg p-4  justify-center gap-4 hover:bg-gray-100 transition-all duration-300"
             >
-              <Link href={`/${data?.link}`} className="flex-c flex-col">
+              <Link href={data?.link} className="flex-c flex-col">
                 <div className="">
                   <Image
                     src={data?.icon}

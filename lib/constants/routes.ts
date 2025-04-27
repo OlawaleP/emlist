@@ -11,6 +11,7 @@ export const ROUTES = {
   LIST_NEW_JOB: "/dashboard/job/list-new-job",
   PLANNED_MAINTENANCE: "/dashboard/planned-maintenance",
   DASHBOARD_JOB: "/dashboard/job",
-  PRODUCT_DETAILS: (id: string) => `/products/${id}`,
+  GENERAL_EXPERT_DETAILS: (id: string) => `/expert/info/${id}`,
+  GENERAL_MATERIAL_DETAILS: (id: string) => `/material/info/${id}`,
   CART: "/dashboard/cart",
 } as const;

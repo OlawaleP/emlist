@@ -10,6 +10,12 @@
   .padding-ctn {
     @apply 2xl:container 2xl:mx-auto xl:px-[6rem] lg:px-[4rem] sm:px-[2rem] px-3;
   }
+  .padding-l-ctn {
+    @apply 2xl:container 2xl:mx-auto xl:pl-[6rem] lg:pl-[4rem] sm:pl-[2rem] pl-3;
+  }
+  .padding-y {
+    @apply sm:py-20 py-10;
+  }
   .flex-c-b {
     @apply flex items-center justify-between;
   }
@@ -29,6 +35,52 @@ body {
   background-color: #fff;
   min-height: 100vh;
   color: #303632;
+}
+
+::-webkit-scrollbar {
+  width: 4px !important;
+  height: 4px !important;
+}
+
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.no-scroll ::-webkit-scrollbar {
+  width: 0px !important;
+  height: 0px !important;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px #dcdada !important;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: #b7abab !important;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #cb9e9e;
+}
+
+.custom-auth-input input:-webkit-autofill {
+  background-color: #fff !important;
+  color: #303632 !important;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
 }
 
 @keyframes shrink {
