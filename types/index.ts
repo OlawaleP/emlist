@@ -15,3 +15,14 @@ export interface TooltipProps {
   children: ReactNode;
   position?: "top" | "bottom" | "left" | "right";
 }
+
+export interface ExpertCardProps {
+  expert: {
+    _id: string;
+    businessImages?: { imageUrl: string }[];
+    services: string[];
+    currency: string;
+    startingPrice?: number;
+  };
+  onClick: () => void;
+}
