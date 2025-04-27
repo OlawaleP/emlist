@@ -1,3 +1,10 @@
+import IconOne from "../../public/icons/Group 26932.svg";
+import IconTwo from "../../public/icons/Group 26932 (1).svg";
+import IconThree from "../../public/icons/Group 26932 (2).svg";
+import IconFour from "../../public/icons/Group 26932 (3).svg";
+import IconFive from "../../public/icons/Group 26932 (4).svg";
+import { ROUTES } from "./routes";
+
 export const category = [
   "Agriculture",
   "Artisan",
@@ -35,4 +42,37 @@ export const serviceList = [
   "Surveyor",
   "Safety Officer",
   "Others",
+];
+
+export const mainCategoriesLinks = [
+  {
+    id: 1,
+    name: "Hire Workers",
+    link: ROUTES?.HIRE_EXPERT,
+    icon: IconOne,
+  },
+  {
+    id: 2,
+    name: "Job Opportunities",
+    link: ROUTES?.FIND_JOB,
+    icon: IconTwo,
+  },
+  {
+    id: 3,
+    name: "Buy Materials",
+    link: ROUTES?.BUY_MATERIALS,
+    icon: IconThree,
+  },
+  {
+    id: 4,
+    name: "Customized Service Request",
+    link: ROUTES?.PRIVATE_EXPERT,
+    icon: IconFour,
+  },
+  {
+    id: 5,
+    name: "Planned Maintenance",
+    link: ROUTES?.PLANNED_MAINTENANCE,
+    icon: IconFive,
+  },
 ];
