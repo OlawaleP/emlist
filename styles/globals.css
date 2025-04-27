@@ -13,6 +13,9 @@
   .flex-c-b {
     @apply flex items-center justify-between;
   }
+  .flex-c {
+    @apply flex items-center;
+  }
 }
 
 * {
