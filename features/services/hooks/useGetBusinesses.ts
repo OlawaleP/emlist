@@ -50,7 +50,7 @@ export const useGetBusinesses = () => {
 
   useEffect(() => {
     fetchBusinesses();
-  }, [currentPage, search]);
+  }, [currentPage]);
 
   return {
     data,

@@ -12,5 +12,6 @@ export const ROUTES = {
   PLANNED_MAINTENANCE: "/dashboard/planned-maintenance",
   DASHBOARD_JOB: "/dashboard/job",
   GENERAL_EXPERT_DETAILS: (id: string) => `/expert/info/${id}`,
+  GENERAL_MATERIAL_DETAILS: (id: string) => `/material/info/${id}`,
   CART: "/dashboard/cart",
 } as const;

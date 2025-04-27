@@ -22,7 +22,7 @@ const ExpertCard: React.FC<ExpertCardProps> = ({ expert, onClick }) => {
       <PopularPriceDisplay
         currency={expert.currency}
         startingPrice={expert.startingPrice}
-        priceCaption="Price"
+        priceCaption="Start price"
       />
     </Link>
   );

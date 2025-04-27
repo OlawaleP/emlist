@@ -26,3 +26,16 @@ export interface ExpertCardProps {
   };
   onClick: () => void;
 }
+
+export interface MaterialCardProps {
+  material: {
+    _id: string;
+    images?: { imageUrl: string }[];
+    name: string;
+    currency: string;
+    price?: number;
+    isDiscounted: boolean;
+    discountedPrice: number;
+  };
+  onClick: () => void;
+}
