@@ -1,4 +1,5 @@
 import { numberWithCommas } from "@/lib/helpers";
+import { getCurrencySign } from "@/lib/helpers/getCurrencySign";
 
 const PopularJobPriceDisplay: React.FC<{
   type: "biddable" | "regular";
@@ -6,12 +7,12 @@ const PopularJobPriceDisplay: React.FC<{
   budget?: number;
   maximumPrice?: number;
 }> = ({ type, currency, budget, maximumPrice }) => (
-  <p className="w-full flex justify-center text-center text-sm max-md:text-xs pt-4">
+  <p className="w-full flex-c text-sm max-md:text-xs pt-4">
     <span className="text-gray-500">
       {type === "regular" ? "Budget" : "Max price"}:
     </span>
     <span className="ml-2 font-semibold">
-      {currency}{" "}
+      {currency && getCurrencySign(currency)}
       {budget
         ? numberWithCommas(budget)
         : maximumPrice

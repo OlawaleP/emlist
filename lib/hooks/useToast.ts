@@ -1,6 +1,8 @@
 "use client";
 
-import { useState, useCallback } from "react";
+import { useContext } from "react";
+
+import { ToastContext } from "../context/ToastState";
 
 export interface ToastState {
   message: string;
@@ -9,22 +11,10 @@ export interface ToastState {
   autoClose?: boolean;
 }
 
-export function useToast(id: string) {
-  const [toast, setToast] = useState<ToastState | null>(null);
-
-  const showToast = useCallback(
-    ({ message, type, duration = 3000, autoClose = true }: ToastState) => {
-      setToast({ message, type, duration, autoClose });
-      if (autoClose && duration) {
-        setTimeout(() => setToast(null), duration);
-      }
-    },
-    []
-  );
-
-  const dismissToast = useCallback(() => {
-    setToast(null);
-  }, []);
-
-  return { toast, showToast, dismissToast };
+export function useToast() {
+  const context = useContext(ToastContext);
+  if (!context) {
+    throw new Error("useToast must be used within a ToastProvider");
+  }
+  return context;
 }

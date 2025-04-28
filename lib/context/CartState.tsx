@@ -3,7 +3,6 @@
 import { createContext, useCallback, useEffect, useState } from "react";
 
 import { getCart } from "@/features/cart/api/getCart";
-import { Toast } from "@/components/atoms/Toast";
 import { readAuthCookie } from "../helpers/cookieHelper";
 import { useToast } from "../hooks/useToast";
 
@@ -17,7 +16,7 @@ type Props = {
 
 const CartState = ({ children }: Props) => {
   const token = readAuthCookie("sessionId");
-  const { showToast } = useToast("cart-toast");
+  const { showToast } = useToast();
 
   const [loading, setLoading] = useState(true);
   const [cartItems, setCartItems] = useState([]);
@@ -67,7 +66,6 @@ const CartState = ({ children }: Props) => {
 
   return (
     <CartContext.Provider value={value}>
-      <Toast id="cart-toast" />
       {loading ? <GeneralSpinner /> : children}
     </CartContext.Provider>
   );

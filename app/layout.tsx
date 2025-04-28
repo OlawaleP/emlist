@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import "../styles/globals.css";
 
 import Providers from "./providers";
+import { Toast } from "@/components/atoms/Toast";
 
 export const metadata: Metadata = {
   title: "Emilist",
@@ -74,6 +75,7 @@ export default function RootLayout({
       <body className="app">
         <div className="text-yellow-400 bg-yellow-100 text-green-400 bg-green-100 text-red-400 bg-red-100 text-[#FF5D7A] bg-[#FFF1F2]" />
         <Providers>
+          <Toast />
           <div className="">{children}</div>
         </Providers>
       </body>

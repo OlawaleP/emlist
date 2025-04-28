@@ -2,12 +2,15 @@
 
 import AuthState from "@/lib/context/AuthState";
 import CartState from "@/lib/context/CartState";
+import ToastState from "@/lib/context/ToastState";
 
 const Providers = ({ children }: { children: React.ReactNode }) => {
   return (
-    <CartState>
-      <AuthState>{children}</AuthState>
-    </CartState>
+    <ToastState>
+      <CartState>
+        <AuthState>{children}</AuthState>
+      </CartState>
+    </ToastState>
   );
 };
 
