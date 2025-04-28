@@ -32,6 +32,7 @@ const config: Config = {
         "primary-yellow": "#fee300",
         "neutral-black": "#030a05",
         "nuetral-light": "#f6ffec",
+        "light-brown": "#8A8D8B",
       },
       borderWidth: {
         1: "1px",
