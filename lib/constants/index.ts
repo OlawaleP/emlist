@@ -76,3 +76,33 @@ export const mainCategoriesLinks = [
     icon: IconFive,
   },
 ];
+
+export const footerLinks = [
+  {
+    title: "Company",
+    links: [
+      { name: "About Us", link: ROUTES?.ABOUT_US },
+      { name: "Privacy Policy", link: ROUTES?.POLICY },
+      { name: "Terms of Use", link: ROUTES?.TERMS_OF_USE },
+      { name: "Cookie Policy", link: ROUTES?.COOKIE_POLICY },
+    ],
+  },
+  {
+    title: "Support",
+    links: [
+      { name: "How it works", link: ROUTES?.HOW_IT_WORKS },
+      { name: "FAQ", link: ROUTES?.FAQ },
+      { name: "Guides", link: ROUTES?.GUIDES },
+      { name: "Help Center", link: ROUTES?.HELP_CENTER },
+    ],
+  },
+  {
+    title: "Community",
+    links: [
+      { name: "Blogs", link: ROUTES?.BLOGS },
+      { name: "Press & News", link: ROUTES?.NEWS },
+      { name: "Helpful Tips", link: ROUTES?.TIPS },
+      { name: "Customer Testimonial", link: ROUTES?.TESTIMONIALS },
+    ],
+  },
+];
