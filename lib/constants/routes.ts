@@ -14,6 +14,7 @@ export const ROUTES = {
   TESTIMONIALS: "/testimonial",
   LOGIN: "/login",
   SIGN_UP: "/sign-up",
+  FORGOT_PASSWORD: "/forgot-password",
   SEARCH_SERVICE: "/catalog/services?",
   FIND_JOB: "/find-job",
   HIRE_EXPERT: "/hire-experts",

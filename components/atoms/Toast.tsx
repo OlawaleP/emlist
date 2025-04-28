@@ -10,7 +10,7 @@ export const Toast = () => {
       {toasts.map((toast) => (
         <div
           key={toast.id}
-          className="fixed bg-white bottom-4 right-4 flex-c-b p-4 rounded-lg shadow-lg max-w-sm w-full z-50"
+          className="fixed bg-nuetral-light bottom-4 right-4 flex-c-b p-4 rounded-lg shadow-lg max-w-sm w-full z-50"
           role="alert"
           aria-live="assertive"
         >

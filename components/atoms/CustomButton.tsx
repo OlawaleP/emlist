@@ -11,9 +11,7 @@ const CustomButton: React.FC<ButtonProps> = ({
   loading,
   isAllInputFilled,
 }) => {
-  const isDisabled =
-    (loading === false && typeof loading !== "undefined") ||
-    (typeof isAllInputFilled !== "undefined" && !isAllInputFilled);
+  const isDisabled = !isAllInputFilled;
 
   const buttonElement = (
     <button
@@ -22,7 +20,7 @@ const CustomButton: React.FC<ButtonProps> = ({
       disabled={isDisabled || loading}
       className={`custom-btn ${className} ${
         isDisabled || loading ? "cursor-not-allowed opacity-65" : ""
-      } ${loading ? "w-40" : ""}`}
+      } ${loading ? "min-w-40" : ""}`}
     >
       {loading ? <span className="btn-loader" /> : children}
     </button>
