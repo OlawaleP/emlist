@@ -8,7 +8,7 @@ import { useToast } from "@/lib/hooks/useToast";
 import { ROUTES } from "@/lib/constants/routes";
 
 export const useLogout = () => {
-  const { showToast } = useToast("logout");
+  const { showToast } = useToast();
 
   const router = useRouter();
   const { setCurrentUser } = useContext(AuthContext);

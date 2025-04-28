@@ -2,6 +2,7 @@ import { LayoutType } from "@/types";
 
 import MainNav from "../organisms/MainNav";
 import NewsLetter from "../organisms/NewsLetter";
+import Footer from "../organisms/Footer";
 
 const MainLayout = ({ children }: LayoutType) => {
   return (
@@ -9,6 +10,7 @@ const MainLayout = ({ children }: LayoutType) => {
       <MainNav />
       <main>{children}</main>
       <NewsLetter />
+      <Footer />
     </div>
   );
 };
