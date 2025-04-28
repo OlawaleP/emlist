@@ -22,6 +22,9 @@
   .flex-c {
     @apply flex items-center;
   }
+  .custom-btn {
+    @apply bg-primary-green text-white hover:bg-green-600 whitespace-nowrap transition-all duration-300 rounded-lg px-6 py-3 text-center;
+  }
 }
 
 * {
@@ -81,6 +84,29 @@ input[type="number"]::-webkit-outer-spin-button {
 
 input[type="number"] {
   -moz-appearance: textfield;
+}
+
+.btn-loader {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  display: block;
+  margin: 15px auto;
+  position: relative;
+  background: #fff;
+  box-sizing: border-box;
+  animation: shadowExpandX 2s linear infinite alternate;
+}
+
+@keyframes shadowExpandX {
+  0% {
+    box-shadow: 0 0, 0 0;
+    color: rgba(255, 255, 255, 0.2);
+  }
+  100% {
+    box-shadow: -24px 0, 24px 0;
+    color: rgba(255, 255, 255, 0.8);
+  }
 }
 
 @keyframes shrink {
