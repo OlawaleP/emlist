@@ -39,3 +39,9 @@ export interface MaterialCardProps {
   };
   onClick: () => void;
 }
+
+export interface JobCardProps {
+  job: any;
+  userId?: string;
+  addClicks: (type: string, id: string, userId?: string) => void;
+}
