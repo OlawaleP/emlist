@@ -14,3 +14,8 @@ export const Capitalize = (str: string) => {
     .map((word) => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
     .join(" ");
 };
+
+export const hasLetter = (str: string) => {
+  if (typeof str !== "string") return false;
+  return str.trim().length > 0;
+};

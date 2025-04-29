@@ -23,7 +23,7 @@
     @apply flex items-center;
   }
   .custom-btn {
-    @apply bg-primary-green text-white hover:bg-green-600 whitespace-nowrap transition-all duration-300 rounded-lg px-6 py-3 text-center;
+    @apply bg-primary-green text-white whitespace-nowrap transition-all duration-300 rounded-lg px-6 h-11 text-center;
   }
 }
 
@@ -87,8 +87,8 @@ input[type="number"] {
 }
 
 .btn-loader {
-  width: 12px;
-  height: 12px;
+  width: 14px;
+  height: 14px;
   border-radius: 50%;
   display: block;
   margin: 15px auto;

@@ -9,6 +9,7 @@ interface PasswordInputProps {
   inputType: "text" | "password";
   toggleInputType: () => void;
   placeholder?: string;
+  name?: string;
 }
 
 export const PasswordInput = ({
@@ -19,17 +20,20 @@ export const PasswordInput = ({
   inputType,
   toggleInputType,
   placeholder,
+  name,
 }: PasswordInputProps) => (
-  <div className="w-full">
+  <div className="w-full space-y-1">
     <Label htmlFor={id}>{label}</Label>
-    <div className="auth-input-div flex items-center bg-[#ececec] rounded-lg">
-      <Input
+    <div className="min-w-full w-full max-w-full rounded-lg px-2 bg-[#ececec] focus-within:border-primary-green focus-within:border-1  h-10 flex justify-between items-center gap-2">
+      <input
         id={id}
         type={inputType}
+        name={name}
         value={value}
         onChange={onChange}
         placeholder={placeholder}
-        className="flex-1"
+        style={{ fontSize: "16px" }}
+        className="outline-none flex-1 h-full bg-[#ececec] appearance-none"
       />
       <svg
         xmlns="http://www.w3.org/2000/svg"

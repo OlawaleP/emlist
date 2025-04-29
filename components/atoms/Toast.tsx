@@ -10,7 +10,7 @@ export const Toast = () => {
       {toasts.map((toast) => (
         <div
           key={toast.id}
-          className="fixed bg-nuetral-light bottom-4 right-4 flex-c-b p-4 rounded-lg shadow-lg max-w-sm w-full z-50"
+          className="fixed bg-nuetral-light bottom-4 right-4 flex-c-b p-4 rounded-lg shadow-lg  max-w-sm w-full z-50"
           role="alert"
           aria-live="assertive"
         >
@@ -46,7 +46,7 @@ export const Toast = () => {
           </div>
           <button
             onClick={() => dismissToast(toast.id)}
-            className="ml-4 btn btn-ghost btn-sm"
+            className="ml-4 btn-ghost btn-sm hover:bg-gray-300 transition-all duration-300 p-1 rounded-full"
             aria-label="Close toast"
           >
             <svg

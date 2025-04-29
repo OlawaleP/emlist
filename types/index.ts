@@ -4,6 +4,13 @@ export interface LayoutType {
   children: React.ReactNode;
 }
 
+export interface ToastState {
+  message: string;
+  type: "success" | "error";
+  duration?: number;
+  autoClose?: boolean;
+}
+
 export interface NavItemProps {
   label: string;
   onClick: () => void;

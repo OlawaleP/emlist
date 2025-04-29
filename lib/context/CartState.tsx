@@ -45,7 +45,7 @@ const CartState = ({ children }: Props) => {
 
   useEffect(() => {
     if (token) {
-      getCart();
+      fetchCart();
     } else {
       setLoading(false);
     }
