@@ -11,7 +11,10 @@ const CustomButton: React.FC<ButtonProps> = ({
   loading,
   isAllInputFilled,
 }) => {
-  const isDisabled = !isAllInputFilled;
+  const isDisabled =
+    isAllInputFilled !== undefined &&
+    !isAllInputFilled &&
+    loading !== undefined;
 
   const buttonElement = (
     <button
