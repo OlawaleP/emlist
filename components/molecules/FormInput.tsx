@@ -8,6 +8,7 @@ interface FormInputProps {
   value: string;
   onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
   placeholder?: string;
+  name?: string;
 }
 
 export const FormInput = ({
@@ -17,8 +18,9 @@ export const FormInput = ({
   value,
   onChange,
   placeholder,
+  name,
 }: FormInputProps) => (
-  <div className="w-full">
+  <div className="w-full space-y-1">
     <Label htmlFor={id}>{label}</Label>
     <Input
       id={id}
@@ -26,6 +28,7 @@ export const FormInput = ({
       value={value}
       onChange={onChange}
       placeholder={placeholder}
+      name={name}
     />
   </div>
 );

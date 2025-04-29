@@ -6,6 +6,8 @@ import { checkAllFieldsFilled } from "@/lib/helpers/checkAllFieldsFilled";
 import { createAuthCookie } from "@/lib/helpers/cookieHelper";
 import { loginUser } from "../api/loginUser";
 import { useToast } from "@/lib/hooks/useToast";
+import { promiseErrorFunction } from "@/lib/helpers/promiseError";
+import { ROUTES } from "@/lib/constants/routes";
 
 export const useLogin = () => {
   const router = useRouter();
@@ -53,10 +55,11 @@ export const useLogin = () => {
         duration: 8000,
         autoClose: true,
       });
-      router.push("/dashboard/job");
+      router.push(ROUTES?.DASHBOARD_JOB);
       setFormData({ email: "", password: "" });
     } catch (error: any) {
       console.error("Login error:", error);
+      promiseErrorFunction(error, showToast);
     } finally {
       setLoading(false);
     }

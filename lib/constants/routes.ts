@@ -14,7 +14,10 @@ export const ROUTES = {
   TESTIMONIALS: "/testimonial",
   LOGIN: "/login",
   SIGN_UP: "/sign-up",
+  VERIFY_EMAIL: (email: string) => `/verify-email/${encodeURIComponent(email)}`,
   FORGOT_PASSWORD: "/forgot-password",
+  RESET_PASSWORD: (email: string) =>
+    `/reset-password/${encodeURIComponent(email)}`,
   SEARCH_SERVICE: "/catalog/services?",
   FIND_JOB: "/find-job",
   HIRE_EXPERT: "/hire-experts",

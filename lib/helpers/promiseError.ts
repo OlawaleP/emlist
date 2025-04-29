@@ -1,7 +1,12 @@
-import { useToast } from "../hooks/useToast";
-
-export const promiseErrorFunction = (error: any) => {
-  const { showToast } = useToast();
+export const promiseErrorFunction = (
+  error: any,
+  showToast: (options: {
+    message: string;
+    type: "success" | "error";
+    duration: number;
+    autoClose: boolean;
+  }) => void
+) => {
   if (error?.response?.data?.message) {
     showToast({
       message: `${error?.response?.data?.message}`,

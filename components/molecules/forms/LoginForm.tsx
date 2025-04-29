@@ -1,37 +1,26 @@
+"use client";
+
 import Link from "next/link";
 
-import { FormEventHandler } from "react";
 import { FormInput } from "../FormInput";
 import { PasswordInput } from "../PasswordInput";
+import { ROUTES } from "@/lib/constants/routes";
+import { useLogin } from "@/features/auth/hooks/useLogin";
 
 import CustomButton from "@/components/atoms/CustomButton";
-import { ROUTES } from "@/lib/constants/routes";
+import DontRememberPassword from "@/components/atoms/DontRememberPassword";
 
-interface LoginFormProps {
-  formData: { email: string; password: string };
-  handleChange: (
-    field: keyof { email: string; password: string },
-    value: string
-  ) => void;
-  handleLogin: FormEventHandler<HTMLFormElement>;
-  loading: boolean;
-  inputType: "text" | "password";
-  handleInputType: () => void;
-  checkAllFieldsFilled: (field: any) => boolean;
-}
-
-export const LoginForm = ({
-  formData,
-  handleChange,
-  handleLogin,
-  loading,
-  inputType,
-  handleInputType,
-  checkAllFieldsFilled,
-}: LoginFormProps) => {
+export const LoginForm = () => {
+  const {
+    handleLogin,
+    formData,
+    loading,
+    inputType,
+    handleChange,
+    handleInputType,
+    checkAllFieldsFilled,
+  } = useLogin();
   const isAllInputFilled = checkAllFieldsFilled(formData);
-
-  console.log("isAllInputFilled", isAllInputFilled);
 
   return (
     <form
@@ -56,14 +45,7 @@ export const LoginForm = ({
           toggleInputType={handleInputType}
           placeholder="Enter your password"
         />
-        <div className="flex items-center justify-end">
-          <Link
-            href={ROUTES?.FORGOT_PASSWORD}
-            className="font-semibold max-sm:text-sm py-2"
-          >
-            Forgot Password?
-          </Link>
-        </div>
+        <DontRememberPassword />
       </div>
       <CustomButton
         type="submit"
