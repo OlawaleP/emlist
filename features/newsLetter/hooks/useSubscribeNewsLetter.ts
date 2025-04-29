@@ -42,7 +42,7 @@ export const useSubscribeNewsLetter = (): UseSubscribeNewsLetterReturn => {
       setEmail("");
     } catch (error: any) {
       console.error("Newsletter subscription error:", error);
-      promiseErrorFunction(error);
+      promiseErrorFunction(error, showToast);
     } finally {
       setLoading(false);
     }
