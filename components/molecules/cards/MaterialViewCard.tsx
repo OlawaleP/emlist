@@ -28,9 +28,9 @@ const MaterialViewCard: React.FC<MaterialCardProps> = ({
         width={140}
         height={100}
         alt="service"
-        className="md:col-span-1 col-span-2 object-cover w-full sm:h-36 h-28 rounded-lg"
+        className="md:col-span-1 col-span-2 object-cover w-full sm:h-36 h-28 rounded-lg max-sm:hidden"
       />
-      <div className="col-span-4 flex justify-between max-md:flex-col md:gap-10 gap-2">
+      <div className="sm:col-span-4 col-span-6 flex justify-between max-md:flex-col md:gap-10 gap-2">
         <div className="flex flex-col gap-2 flex-1">
           <MaterialCardInfo material={material} />
           <div className="flex items-center sm:py-2">

@@ -31,7 +31,7 @@ const MaterialList: React.FC<MaterialListProps> = ({
     });
   };
   return (
-    <div className="col-span-7 pl-6 max-lg:col-span-10">
+    <div className="col-span-7 lg:pl-6 max-lg:col-span-10">
       {cartLoading && <WhiteBgLoader />}
       {isLiking && <WhiteBgLoader />}
       {isUnliking && <WhiteBgLoader />}
@@ -42,7 +42,7 @@ const MaterialList: React.FC<MaterialListProps> = ({
       ) : (
         <h6 className="text-[#737774] text-sm mb-4">No result found</h6>
       )}
-      <div className="flex flex-col gap-5 h-[calc(100vh-5rem)] overflow-y-auto hide-scrollbar">
+      <div className="flex flex-col gap-5 lg:h-[calc(100vh-5rem)] overflow-y-auto hide-scrollbar">
         {allMaterials?.map((material: Material) => (
           <MaterialViewCard
             key={material._id}
