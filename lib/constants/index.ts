@@ -106,3 +106,40 @@ export const footerLinks = [
     ],
   },
 ];
+
+export const landingPageLinks = [
+  {
+    id: 1,
+    name: "Service Providers",
+    link: ROUTES?.HIRE_EXPERT,
+  },
+  {
+    id: 2,
+    name: "Job Opportunities",
+    link: ROUTES?.FIND_JOB,
+  },
+  {
+    id: 3,
+    name: "Materials",
+    link: ROUTES?.BUY_MATERIALS,
+  },
+];
+
+export const serviceRating = [
+  {
+    count: 4,
+    value: "four",
+  },
+  {
+    count: 3,
+    value: "three",
+  },
+  {
+    count: 2,
+    value: "two",
+  },
+  {
+    count: 1,
+    value: "one",
+  },
+];

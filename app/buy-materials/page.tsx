@@ -1,7 +1,12 @@
-import React from "react";
+import MainLayout from "@/components/templates/MainLayout";
+import MaterialsListWrapper from "@/components/organisms/MaterialsListWrapper";
 
 const BuyMaterials = () => {
-  return <div>BuyMaterials</div>;
+  return (
+    <MainLayout>
+      <MaterialsListWrapper />
+    </MainLayout>
+  );
 };
 
 export default BuyMaterials;

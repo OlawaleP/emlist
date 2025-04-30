@@ -1,0 +1,70 @@
+import { Material, MaterialListProps } from "@/types";
+
+import MaterialViewCard from "../molecules/cards/MaterialViewCard";
+import WhiteBgLoader from "../atoms/WhiteBgLoader";
+
+import { useSaveMaterials } from "@/features/materials/hooks/useSaveMaterial";
+import { useAddMaterialToCart } from "@/features/cart/hooks/useAddMaterialToCart";
+import { useUnsaveMaterial } from "@/features/materials/hooks/useUnSaveMaterial";
+
+const MaterialList: React.FC<MaterialListProps> = ({
+  allMaterials,
+  totalProducts,
+  currentPage,
+  totalPages,
+  handlePageChange,
+  refetchAllMaterials,
+}) => {
+  const { handleSaveMaterial, isLiking } = useSaveMaterials();
+  const { addMaterialToCart, cartLoading } = useAddMaterialToCart();
+  const { handleUnsaveMaterial, isUnliking } = useUnsaveMaterial();
+
+  const handleLike = (id: string) => {
+    handleSaveMaterial(id, () => {
+      refetchAllMaterials();
+    });
+  };
+
+  const handleUnlike = (id: string) => {
+    handleUnsaveMaterial(id, () => {
+      refetchAllMaterials();
+    });
+  };
+  return (
+    <div className="col-span-7 pl-6 max-lg:col-span-10">
+      {cartLoading && <WhiteBgLoader />}
+      {isLiking && <WhiteBgLoader />}
+      {isUnliking && <WhiteBgLoader />}
+      {totalProducts > 0 ? (
+        <h6 className="text-[#737774] text-sm mb-4">
+          {totalProducts} results found
+        </h6>
+      ) : (
+        <h6 className="text-[#737774] text-sm mb-4">No result found</h6>
+      )}
+      <div className="flex flex-col gap-5 h-[calc(100vh-5rem)] overflow-y-auto hide-scrollbar">
+        {allMaterials?.map((material: Material) => (
+          <MaterialViewCard
+            key={material._id}
+            material={material}
+            addMaterialToCart={addMaterialToCart}
+            handleSaveMaterial={handleLike}
+            handleUnsaveMaterial={handleUnlike}
+          />
+        ))}
+        {totalProducts > 10 && (
+          <div className="md:w-2/3 w-full">
+            {/* <Pagination
+              current={currentPage}
+              total={totalPages}
+              onPageChange={handlePageChange}
+              extraClassName="justify-content-start"
+            /> */}
+          </div>
+        )}
+      </div>
+    </div>
+  );
+};
+
+export default MaterialList;
