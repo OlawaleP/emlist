@@ -93,5 +93,6 @@ export const useGetMaterials = (material?: string, locationQuery?: string) => {
     totalProducts,
     setLoading,
     setCurrentPage,
+    refetchAllMaterials: fetchAllMaterials,
   };
 };

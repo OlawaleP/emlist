@@ -93,3 +93,67 @@ export interface ProfileCardProps {
   description: string;
   profileImage: ProfileImageData;
 }
+
+export interface FavoriteButtonProps {
+  liked: boolean;
+  onSave: () => void;
+  onUnsave: () => void;
+}
+
+export interface ReadMoreProps {
+  text: string;
+  maxLength: number;
+  style?: string;
+}
+
+export interface PriceDisplayProps {
+  currency: string;
+  price: number;
+}
+
+export interface Material {
+  _id: string;
+  name: string;
+  description: string;
+  images: { imageUrl: string }[];
+  currency: string;
+  price: number;
+  liked: boolean;
+  userId: any;
+}
+
+export interface MaterialInfoProps {
+  material: Material;
+}
+
+export interface User {
+  _id: string;
+  fullName?: string;
+  userName: string;
+  profileImage?: string;
+}
+
+export interface UserProfileLinkProps {
+  user: User;
+}
+
+export interface MaterialListProps {
+  allMaterials: Material[];
+  totalProducts: number;
+  currentPage: number;
+  totalPages: number;
+  handlePageChange: (page: number) => void;
+  refetchAllMaterials: () => Promise<void>;
+}
+
+export interface FilterMaterialWrapperProps {
+  minValue: number;
+  maxValue: number;
+  handleMinChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  handleMaxChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  rating: string;
+  setRating: (rating: string) => void;
+  noOfReviews: string | undefined;
+  setNoOfReviews: (reviews: string) => void;
+  getAllMaterials: () => Promise<void>;
+}

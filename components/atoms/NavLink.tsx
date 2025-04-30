@@ -1,16 +1,15 @@
 "use client";
 
 import Link from "next/link";
-import { usePathname } from "next/navigation";
 
+import { useActivePath } from "@/lib/hooks/useActivePath";
 interface NavLinkProps {
   href: string;
   children: React.ReactNode;
 }
 
 const NavLink = ({ href, children }: NavLinkProps) => {
-  const pathname = usePathname();
-  const isActive = pathname === href;
+  const isActive = useActivePath(href);
 
   return (
     <div className="relative group">

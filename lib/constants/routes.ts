@@ -37,4 +37,5 @@ export const ROUTES = {
   DASHBOARD_MATERIAL: `/dashboard/material`,
   GENERAL_MATERIAL_DETAILS: (id: string) => `/material/info/${id}`,
   CART: "/dashboard/cart",
+  PUBLIC_USER_PROFILE: (id: string) => `/profile/about/${id}`,
 } as const;
