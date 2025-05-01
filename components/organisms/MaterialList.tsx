@@ -6,6 +6,7 @@ import WhiteBgLoader from "../atoms/WhiteBgLoader";
 import { useSaveMaterials } from "@/features/materials/hooks/useSaveMaterial";
 import { useAddMaterialToCart } from "@/features/cart/hooks/useAddMaterialToCart";
 import { useUnsaveMaterial } from "@/features/materials/hooks/useUnSaveMaterial";
+import CustomPagination from "../molecules/CustomPagination";
 
 const MaterialList: React.FC<MaterialListProps> = ({
   allMaterials,
@@ -52,17 +53,16 @@ const MaterialList: React.FC<MaterialListProps> = ({
             handleUnsaveMaterial={handleUnlike}
           />
         ))}
-        {totalProducts > 10 && (
-          <div className="md:w-2/3 w-full">
-            {/* <Pagination
-              current={currentPage}
-              total={totalPages}
-              onPageChange={handlePageChange}
-              extraClassName="justify-content-start"
-            /> */}
-          </div>
-        )}
       </div>
+      {totalProducts > 1 && (
+        <div className="md:w-2/3 w-full pt-2">
+          <CustomPagination
+            handlePageChange={handlePageChange}
+            currentPage={currentPage}
+            totalPages={totalPages}
+          />
+        </div>
+      )}
     </div>
   );
 };
