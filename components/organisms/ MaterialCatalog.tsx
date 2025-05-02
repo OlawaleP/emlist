@@ -1,16 +1,22 @@
 "use client";
 
-import { useGetMaterials } from "@/features/materials/hooks/useGetMaterials";
+import { useSearchParams } from "next/navigation";
+
 import { FilterMaterialWrapperProps, MaterialListProps } from "@/types";
+import { useGetMaterials } from "@/features/materials/hooks/useGetMaterials";
 
-import FeatureLinksWrapper from "./FeatureLinksWrapper";
 import FeatureContentHeader from "./FeatureContentHeader";
-import FilterPanel from "./FilterPanel";
-import MaterialList from "./MaterialList";
-import FilterMaterialWrapper from "./FilterMaterialWrapper";
 import PageLoader from "../atoms/PageLoader";
+import FilterPanel from "./FilterPanel";
+import FilterMaterialWrapper from "./FilterMaterialWrapper";
+import MaterialList from "./MaterialList";
 
-const MaterialsListWrapper = () => {
+const MaterialCatalog = () => {
+  const searchParams = useSearchParams();
+
+  const material = searchParams.get("q") || "";
+  const locationQuery = searchParams.get("location") || "";
+
   const {
     loading,
     allMaterials,
@@ -31,7 +37,7 @@ const MaterialsListWrapper = () => {
     currency,
     setCurrency,
     refetchAllMaterials,
-  } = useGetMaterials();
+  } = useGetMaterials(material, locationQuery);
 
   const filterProps: FilterMaterialWrapperProps = {
     minValue,
@@ -63,14 +69,20 @@ const MaterialsListWrapper = () => {
 
   return (
     <div className="pt-10 padding-ctn">
-      <FeatureLinksWrapper />
+      {" "}
       <FeatureContentHeader
         search={search}
         handleSearchChange={handleChange}
         handleSearchSubmit={handleSubmit}
-        title="Explore Material"
+        title={
+          material
+            ? material
+            : locationQuery
+            ? locationQuery
+            : "Explore Material"
+        }
         description="Amet minim mollit non deserunt ullamco est sit aliqua dolor do
-        amet sint. Velit officia consequat duis enimt."
+  amet sint. Velit officia consequat duis enimt."
       />
       {loading ? (
         <PageLoader />
@@ -86,4 +98,4 @@ const MaterialsListWrapper = () => {
   );
 };
 
-export default MaterialsListWrapper;
+export default MaterialCatalog;

@@ -149,11 +149,13 @@ export interface MaterialListProps {
 export interface FilterMaterialWrapperProps {
   minValue: number;
   maxValue: number;
-  handleMinChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
-  handleMaxChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  handleMinChange: (value: number) => void;
+  handleMaxChange: (value: number) => void;
   rating: string;
   setRating: (rating: string) => void;
   noOfReviews: string | undefined;
   setNoOfReviews: (reviews: string) => void;
+  currency: string;
+  setCurrency: (currency: string) => void;
   getAllMaterials: () => Promise<void>;
 }

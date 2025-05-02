@@ -4,13 +4,15 @@ import Rating from "../molecules/Rating";
 import PriceRangeSelectorWrapper from "./PriceRangeSelectorWrapper";
 
 import { FilterMaterialWrapperProps } from "@/types";
-import { serviceRating } from "@/lib/constants";
+import { currencies, serviceRating } from "@/lib/constants";
 
 const FilterMaterialWrapper = ({
   minValue,
   maxValue,
   handleMinChange,
   handleMaxChange,
+  currency,
+  setCurrency,
   rating,
   setRating,
   noOfReviews,
@@ -19,7 +21,40 @@ const FilterMaterialWrapper = ({
 }: FilterMaterialWrapperProps) => {
   return (
     <>
-      <PriceRangeSelectorWrapper />
+      <PriceRangeSelectorWrapper
+        minValue={minValue}
+        maxValue={maxValue}
+        handleMinChange={handleMinChange}
+        handleMaxChange={handleMaxChange}
+      />
+      <div className="w-full border-b-1 py-6">
+        <h6 className="text-lg font-semibold max-sm:text-sm">Currencies</h6>
+        <div className="flex flex-col gap-4 my-3">
+          {currencies.map((curr) => (
+            <div
+              className="flex items-center gap-4 cursor-pointer"
+              key={curr}
+              onClick={() => {
+                setCurrency(curr);
+              }}
+            >
+              <Image
+                src={
+                  currency === curr
+                    ? "/icons/circle-color.svg"
+                    : "/icons/circle.svg"
+                }
+                alt="menu"
+                width={25}
+                height={25}
+                className="object-contain w-6 h-6"
+              />
+
+              <span>{curr}</span>
+            </div>
+          ))}
+        </div>
+      </div>
       <div className="w-full border-b-1 py-6">
         <h6 className="text-lg font-semibold max-sm:text-sm">Rating</h6>
         <div className="flex flex-col gap-4 my-3">
@@ -29,7 +64,6 @@ const FilterMaterialWrapper = ({
               key={ratingg.count}
               onClick={() => {
                 setRating(ratingg.value);
-                getAllMaterials();
               }}
             >
               <Image

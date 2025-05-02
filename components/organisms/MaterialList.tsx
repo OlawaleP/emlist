@@ -1,12 +1,12 @@
 import { Material, MaterialListProps } from "@/types";
 
+import CustomPagination from "../molecules/CustomPagination";
 import MaterialViewCard from "../molecules/cards/MaterialViewCard";
 import WhiteBgLoader from "../atoms/WhiteBgLoader";
 
 import { useSaveMaterials } from "@/features/materials/hooks/useSaveMaterial";
 import { useAddMaterialToCart } from "@/features/cart/hooks/useAddMaterialToCart";
 import { useUnsaveMaterial } from "@/features/materials/hooks/useUnSaveMaterial";
-import CustomPagination from "../molecules/CustomPagination";
 
 const MaterialList: React.FC<MaterialListProps> = ({
   allMaterials,
@@ -54,7 +54,7 @@ const MaterialList: React.FC<MaterialListProps> = ({
           />
         ))}
       </div>
-      {totalProducts > 1 && (
+      {totalProducts > 10 && (
         <div className="md:w-2/3 w-full pt-2">
           <CustomPagination
             handlePageChange={handlePageChange}

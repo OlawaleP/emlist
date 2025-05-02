@@ -143,3 +143,5 @@ export const serviceRating = [
     value: "one",
   },
 ];
+
+export const currencies = ["NGN", "USD", "EUR", "GBP"];
