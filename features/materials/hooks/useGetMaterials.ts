@@ -28,16 +28,13 @@ export const useGetMaterials = (material?: string, locationQuery?: string) => {
     setCurrentPage(newPage);
   };
 
-  const handleMinChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const value = Math.min(Number(e.target.value), maxValue - 1);
-    setMinValue(value);
+  const handleMinChange = (value: number) => {
+    setMinValue(Math.min(value, maxValue));
   };
 
-  const handleMaxChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const value = Math.max(Number(e.target.value), minValue + 1);
-    setMaxValue(value);
+  const handleMaxChange = (value: number) => {
+    setMaxValue(Math.max(value, minValue));
   };
-
   const fetchAllMaterials = async () => {
     try {
       const {

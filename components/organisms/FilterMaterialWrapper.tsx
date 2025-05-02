@@ -21,7 +21,12 @@ const FilterMaterialWrapper = ({
 }: FilterMaterialWrapperProps) => {
   return (
     <>
-      <PriceRangeSelectorWrapper />
+      <PriceRangeSelectorWrapper
+        minValue={minValue}
+        maxValue={maxValue}
+        handleMinChange={handleMinChange}
+        handleMaxChange={handleMaxChange}
+      />
       <div className="w-full border-b-1 py-6">
         <h6 className="text-lg font-semibold max-sm:text-sm">Currencies</h6>
         <div className="flex flex-col gap-4 my-3">
