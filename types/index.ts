@@ -155,5 +155,7 @@ export interface FilterMaterialWrapperProps {
   setRating: (rating: string) => void;
   noOfReviews: string | undefined;
   setNoOfReviews: (reviews: string) => void;
+  currency: string;
+  setCurrency: (currency: string) => void;
   getAllMaterials: () => Promise<void>;
 }

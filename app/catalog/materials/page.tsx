@@ -1,7 +1,12 @@
-import React from "react";
+import MaterialCatalog from "@/components/organisms/ MaterialCatalog";
+import MainLayout from "@/components/templates/MainLayout";
 
 const MaterialsSearchedData = () => {
-  return <div>MaterialsSearchedData</div>;
+  return (
+    <MainLayout>
+      <MaterialCatalog />
+    </MainLayout>
+  );
 };
 
 export default MaterialsSearchedData;
