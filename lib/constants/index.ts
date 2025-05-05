@@ -144,4 +144,23 @@ export const serviceRating = [
   },
 ];
 
+export const noticePeriodOptions = [
+  {
+    title: "24 hours",
+    value: 1,
+  },
+  {
+    title: "3 days",
+    value: 3,
+  },
+  {
+    title: "7 days",
+    value: 7,
+  },
+  {
+    title: "21 days",
+    value: 21,
+  },
+];
+
 export const currencies = ["NGN", "USD", "EUR", "GBP"];

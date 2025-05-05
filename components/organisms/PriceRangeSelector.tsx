@@ -21,7 +21,7 @@ const PriceRangeSelector: React.FC<PriceRangeSelectorProps> = ({
   handleMinChange,
 }) => {
   return (
-    <div className="w-full max-w-xs py-6 pr-6 space-y-4">
+    <div className="w-full max-w-xs py-6 pr-6 space-y-4 ">
       <h6 className="text-lg font-semibold max-sm:text-sm">Price</h6>
       <RangeSlider
         minPrice={minPrice}
