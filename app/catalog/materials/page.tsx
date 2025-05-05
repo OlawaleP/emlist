@@ -1,4 +1,4 @@
-import MaterialCatalog from "@/components/organisms/ MaterialCatalog";
+import MaterialCatalog from "@/components/organisms/MaterialCatalog";
 import MainLayout from "@/components/templates/MainLayout";
 
 const MaterialsSearchedData = () => {
