@@ -159,3 +159,29 @@ export interface FilterMaterialWrapperProps {
   setCurrency: (currency: string) => void;
   getAllMaterials: () => Promise<void>;
 }
+
+export interface FilterServiceWrapperProps {
+  minValue: number;
+  setMinValue: (minValue: number) => void;
+  maxValue: number;
+  setMaxValue: (maxValue: number) => void;
+  expertType: string;
+  setExpertType: (expert: string) => void;
+  handleMinChange: any;
+  handleMaxChange: any;
+  rating: string;
+  setRating: (rating: string) => void;
+  noOfReviews: string | undefined;
+  setNoOfReviews: (reviews: string) => void;
+  location: string;
+  setLocation: (location: string) => void;
+  noticePeriod: number | undefined;
+  setNoticePeriod: (period: number) => void;
+  fetchBusinesses: () => Promise<void>;
+  currency: string;
+  setCurrency: (currency: string) => void;
+}
+
+export interface FetchDataType {
+  fetchData: () => Promise<void>;
+}
