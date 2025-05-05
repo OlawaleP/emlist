@@ -16,7 +16,7 @@ export const useLikeBusiness = () => {
 
   const handleLikeBusiness = async (
     businessId: string,
-    reFetchAllBusiness: () => Promise<void>
+    reFetchAllBusiness: () => void
   ) => {
     if (!currentUser) {
       return router.push(ROUTES?.LOGIN);

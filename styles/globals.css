@@ -23,7 +23,7 @@
     @apply flex items-center;
   }
   .custom-btn {
-    @apply bg-primary-green text-white whitespace-nowrap transition-all duration-300 rounded-lg px-6 h-11 text-center;
+    @apply bg-primary-green text-white whitespace-nowrap transition-all duration-300 rounded-lg px-6 h-11 text-center max-sm:text-sm;
   }
 }
 

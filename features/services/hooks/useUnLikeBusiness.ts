@@ -16,7 +16,7 @@ export const useUnlikeBusiness = () => {
 
   const handleUnlikeBusiness = async (
     businessId: string,
-    reFetchAllBusiness: () => Promise<void>
+    reFetchAllBusiness: () => void
   ) => {
     if (!currentUser) {
       return router.push(ROUTES?.LOGIN);

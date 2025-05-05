@@ -2,6 +2,7 @@ import { Material, MaterialListProps } from "@/types";
 
 import CustomPagination from "../molecules/CustomPagination";
 import MaterialViewCard from "../molecules/cards/MaterialViewCard";
+import ResultMsg from "../atoms/ResultMsg";
 import WhiteBgLoader from "../atoms/WhiteBgLoader";
 
 import { useSaveMaterials } from "@/features/materials/hooks/useSaveMaterial";
@@ -36,13 +37,13 @@ const MaterialList: React.FC<MaterialListProps> = ({
       {cartLoading && <WhiteBgLoader />}
       {isLiking && <WhiteBgLoader />}
       {isUnliking && <WhiteBgLoader />}
-      {totalProducts > 0 ? (
-        <h6 className="text-[#737774] text-sm mb-4">
-          {totalProducts} results found
-        </h6>
-      ) : (
-        <h6 className="text-[#737774] text-sm mb-4">No result found</h6>
-      )}
+      <ResultMsg
+        msg={
+          totalProducts > 0
+            ? `${totalProducts} results found`
+            : "No result found"
+        }
+      />
       <div className="flex flex-col gap-5 lg:h-[calc(100vh-5rem)] overflow-y-auto hide-scrollbar">
         {allMaterials?.map((material: Material) => (
           <MaterialViewCard

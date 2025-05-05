@@ -6,13 +6,14 @@ import { MaterialInfoProps } from "@/types";
 import ReadMore from "./ReadMore";
 import Rating from "./Rating";
 import DisplayCardPrice from "../atoms/DisplayCardPrice";
+import { ROUTES } from "@/lib/constants/routes";
 
 const MaterialCardInfo: React.FC<MaterialInfoProps> = ({ material }) => {
   return (
     <div className="flex flex-col gap-2 flex-1">
       <Link
-        href={`/material/info/${material._id}`}
-        className="sm:text-2xl font-bold hover:text-primary-green duration-300"
+        href={ROUTES?.GENERAL_MATERIAL_DETAILS(material._id)}
+        className="sm:text-2xl font-bold hover:text-primary-green transition-all duration-300"
       >
         {Capitalize(material.name)}
       </Link>

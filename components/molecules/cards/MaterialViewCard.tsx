@@ -24,11 +24,15 @@ const MaterialViewCard: React.FC<MaterialCardProps> = ({
   return (
     <div className="w-full grid md:grid-cols-5 grid-cols-6 gap-3 py-4 sm:px-6 px-2 hover:bg-gray-100 duration-300 shadow rounded-2xl">
       <Image
-        src={material.images[0]?.imageUrl || "/placeholder.jpg"}
+        src={material.images[0]?.imageUrl || "/images/Logo.svg"}
         width={140}
         height={100}
         alt="service"
-        className="md:col-span-1 col-span-2 object-cover w-full sm:h-36 h-28 rounded-lg max-sm:hidden"
+        className={`md:col-span-1 col-span-2 w-full sm:h-36 h-28 rounded-lg max-sm:hidden ${
+          !material.images[0]?.imageUrl
+            ? "object-contain shadow px-2"
+            : "object-cover"
+        }`}
       />
       <div className="sm:col-span-4 col-span-6 flex justify-between max-md:flex-col md:gap-10 gap-2">
         <div className="flex flex-col gap-2 flex-1">

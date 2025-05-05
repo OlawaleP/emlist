@@ -1,8 +1,11 @@
 "use client";
 
+import { useContext } from "react";
 import { useSearchParams } from "next/navigation";
 
-import { FilterServiceWrapperProps } from "@/types";
+import { BusinessListProps, FilterServiceWrapperProps } from "@/types";
+import { CompareContext } from "@/lib/context/CompareState";
+import { ROUTES } from "@/lib/constants/routes";
 import { useGetBusinesses } from "@/features/services/hooks/useGetBusinesses";
 
 import FeatureContentHeader from "./FeatureContentHeader";
@@ -10,6 +13,7 @@ import FilterServiceWrapper from "./FilterServiceWrapper";
 import FilterPanel from "./FilterPanel";
 import ServiceList from "./ServiceList";
 import PageLoader from "../atoms/PageLoader";
+import CompareSearch from "../molecules/CompareSearch";
 
 const ServiceCatalog = () => {
   const searchParams = useSearchParams();
@@ -17,6 +21,7 @@ const ServiceCatalog = () => {
   const service = searchParams.get("q") || "";
   const locationQuery = searchParams.get("location") || "";
 
+  const { compareServices } = useContext(CompareContext);
   const {
     fetchBusinesses,
     loading,
@@ -27,9 +32,7 @@ const ServiceCatalog = () => {
     handleChange,
     handlePageChange,
     minValue,
-    setMinValue,
     maxValue,
-    setMaxValue,
     expertType,
     setExpertType,
     handleMinChange,
@@ -50,9 +53,7 @@ const ServiceCatalog = () => {
 
   const filterProps: FilterServiceWrapperProps = {
     minValue,
-    setMinValue,
     maxValue,
-    setMaxValue,
     expertType,
     setExpertType,
     handleMinChange,
@@ -68,6 +69,15 @@ const ServiceCatalog = () => {
     fetchBusinesses,
     currency,
     setCurrency,
+  };
+
+  const listProps: BusinessListProps = {
+    totalBusinesses,
+    totalPages,
+    currentPage,
+    handlePageChange,
+    reFetchAllBusinesses,
+    businesses,
   };
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
@@ -91,6 +101,9 @@ const ServiceCatalog = () => {
         description="Amet minim mollit non deserunt ullamco est sit aliqua dolor do
   amet sint. Velit officia consequat duis enimt."
       />
+      {compareServices?.length > 0 && (
+        <CompareSearch title="businesses" link={ROUTES?.COMPARE_BUSINESSES} />
+      )}
       {loading ? (
         <PageLoader />
       ) : (
@@ -98,7 +111,7 @@ const ServiceCatalog = () => {
           <FilterPanel>
             <FilterServiceWrapper {...filterProps} />
           </FilterPanel>
-          <ServiceList />
+          <ServiceList {...listProps} />
         </div>
       )}
     </div>
