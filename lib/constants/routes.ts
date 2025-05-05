@@ -19,6 +19,7 @@ export const ROUTES = {
   RESET_PASSWORD: (email: string) =>
     `/reset-password/${encodeURIComponent(email)}`,
   SEARCH_SERVICE: "/catalog/services",
+  COMPARE_BUSINESSES: "/compare",
   FIND_JOB: "/find-job",
   HIRE_EXPERT: "/hire-experts",
   BUY_MATERIALS: "/buy-materials",

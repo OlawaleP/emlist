@@ -9,9 +9,7 @@ import NoticePeriodFilter from "../molecules/NoticePeriodFilter";
 
 const FilterServiceWrapper = ({
   minValue,
-  setMinValue,
   maxValue,
-  setMaxValue,
   expertType,
   setExpertType,
   handleMinChange,

@@ -146,6 +146,15 @@ export interface MaterialListProps {
   refetchAllMaterials: () => Promise<void>;
 }
 
+export interface BusinessListProps {
+  totalBusinesses: number;
+  totalPages: number;
+  currentPage: number;
+  handlePageChange: (page: number) => void;
+  reFetchAllBusinesses: () => Promise<void>;
+  businesses: any;
+}
+
 export interface FilterMaterialWrapperProps {
   minValue: number;
   maxValue: number;
@@ -162,9 +171,7 @@ export interface FilterMaterialWrapperProps {
 
 export interface FilterServiceWrapperProps {
   minValue: number;
-  setMinValue: (minValue: number) => void;
   maxValue: number;
-  setMaxValue: (maxValue: number) => void;
   expertType: string;
   setExpertType: (expert: string) => void;
   handleMinChange: any;
