@@ -1,7 +1,12 @@
-import React from "react";
+import MainLayout from "@/components/templates/MainLayout";
+import ServiceCatalog from "@/components/organisms/ServiceCatalog";
 
 const ServicesSearchedData = () => {
-  return <div>ServicesSearchedData</div>;
+  return (
+    <MainLayout>
+      <ServiceCatalog />
+    </MainLayout>
+  );
 };
 
 export default ServicesSearchedData;
