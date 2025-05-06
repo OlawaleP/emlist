@@ -1,7 +1,12 @@
-import React from "react";
+import CompareBusinessWrapper from "@/components/organisms/CompareBusinessWrapper";
+import MainLayout from "@/components/templates/MainLayout";
 
 const CompareServices = () => {
-  return <div>CompareServices</div>;
+  return (
+    <MainLayout>
+      <CompareBusinessWrapper />
+    </MainLayout>
+  );
 };
 
 export default CompareServices;

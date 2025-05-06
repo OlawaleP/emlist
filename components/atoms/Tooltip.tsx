@@ -81,7 +81,7 @@ const Tooltip: React.FC<TooltipProps> = ({
       {children}
       <div
         ref={tooltipRef}
-        className={`absolute z-10 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 bg-black text-white text-sm py-2 px-3 rounded-md whitespace-nowrap ${tooltipPositionStyles[position]}`}
+        className={`absolute z-20 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 bg-black text-white text-sm py-2 px-3 rounded-md whitespace-nowrap ${tooltipPositionStyles[position]}`}
       >
         {content}
         <span

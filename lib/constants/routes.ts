@@ -34,6 +34,7 @@ export const ROUTES = {
     `/dashboard/job/info/regular/${id}`,
   GENERAL_DIRECT_JOB_DETAILS: (id: string) =>
     `/dashboard/job/info/direct/${id}`,
+  DASHBOARD_EXPERT: "/dashboard/expert",
   GENERAL_EXPERT_DETAILS: (id: string) => `/expert/info/${id}`,
   DASHBOARD_MATERIAL: `/dashboard/material`,
   GENERAL_MATERIAL_DETAILS: (id: string) => `/material/info/${id}`,
