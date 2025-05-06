@@ -2,7 +2,9 @@
 
 import AuthState from "@/lib/context/AuthState";
 import CartState from "@/lib/context/CartState";
+import ChatState from "@/lib/context/ChatState";
 import CompareState from "@/lib/context/CompareState";
+import { SocketContextProvider } from "@/lib/context/SocketContext";
 import ToastState from "@/lib/context/ToastState";
 
 const Providers = ({ children }: { children: React.ReactNode }) => {
@@ -10,7 +12,11 @@ const Providers = ({ children }: { children: React.ReactNode }) => {
     <ToastState>
       <CompareState>
         <CartState>
-          <AuthState>{children}</AuthState>
+          <AuthState>
+            <ChatState>
+              <SocketContextProvider>{children}</SocketContextProvider>
+            </ChatState>
+          </AuthState>
         </CartState>
       </CompareState>
     </ToastState>

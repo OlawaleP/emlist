@@ -67,6 +67,7 @@ const CompareBusinessWrapper = () => {
       <ContactExpertModal
         isOpen={openModal}
         onClose={() => setOpenModal(false)}
+        user={selectedBusiness}
       />
     </div>
   );
