@@ -18,8 +18,8 @@ const FeatureContentHeader = ({
 }: FeatureContentHeaderProps) => {
   return (
     <section className="w-full">
-      <div className="flex md:items-end gap-10 max-md:flex-col">
-        <div className="flex flex-col gap-4 flex-1">
+      <div className="flex md:items-end sm:gap-10 gap-4 max-md:flex-col">
+        <div className="flex flex-col sm:gap-4 gap-2 flex-1">
           <Heading text={title} className="sm:text-4xl text-lg" />
           <p className="max-sm:text-sm">{description}</p>
         </div>

@@ -26,6 +26,7 @@ export const useFetchJobs = () => {
   };
 
   const getAllJobs = async () => {
+    setIsLoading(true);
     try {
       const { jobs: newJobs, totalPages } = await getJobs({
         currentPage: currentPage,
@@ -38,7 +39,7 @@ export const useFetchJobs = () => {
       setAllJobs(newJobs);
       setData((prev) => [...prev, ...newJobs]);
       setTotalPages(totalPages);
-      if (currentPage >= newJobs) {
+      if (currentPage >= totalPages) {
         setHasMore(false);
       }
     } catch (error: any) {

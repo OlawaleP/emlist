@@ -24,7 +24,6 @@ const ServiceCatalog = () => {
   const { compareServices } = useContext(CompareContext);
   const {
     fetchBusinesses,
-    loading,
     search,
     businesses,
     totalPages,
@@ -49,6 +48,8 @@ const ServiceCatalog = () => {
     currency,
     setCurrency,
     reFetchAllBusinesses,
+    isFetching,
+    setIsFetching,
   } = useGetBusinesses(service, locationQuery);
 
   const filterProps: FilterServiceWrapperProps = {
@@ -82,6 +83,7 @@ const ServiceCatalog = () => {
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    setIsFetching(true);
     await reFetchAllBusinesses();
   };
 
@@ -104,7 +106,7 @@ const ServiceCatalog = () => {
       {compareServices?.length > 0 && (
         <CompareSearch title="businesses" link={ROUTES?.COMPARE_BUSINESSES} />
       )}
-      {loading ? (
+      {isFetching ? (
         <PageLoader />
       ) : (
         <div className="grid grid-cols-10 pt-10 no-scroll">

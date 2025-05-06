@@ -17,7 +17,7 @@ const ServiceList = ({
   reFetchAllBusinesses,
   businesses,
 }: BusinessListProps) => {
-  const { compare } = useCompare();
+  const { compare, isComparing } = useCompare();
   const { handleLikeBusiness, isLoading } = useLikeBusiness();
   const { handleUnlikeBusiness, isLoad } = useUnlikeBusiness();
 
@@ -33,10 +33,17 @@ const ServiceList = ({
     });
   };
 
+  const handleCompare = (id: string) => {
+    compare(id, () => {
+      reFetchAllBusinesses();
+    });
+  };
+
   return (
     <div className="col-span-7 lg:pl-6 max-lg:col-span-10">
       {isLoad && <WhiteBgLoader />}
       {isLoading && <WhiteBgLoader />}
+      {isComparing && <WhiteBgLoader />}
       <ResultMsg
         msg={
           totalBusinesses > 0
@@ -49,7 +56,7 @@ const ServiceList = ({
           <ServiceViewCard
             key={expert._id}
             expert={expert}
-            compare={compare}
+            compare={handleCompare}
             handleLike={handleLike}
             handleUnlike={handleUnlike}
           />

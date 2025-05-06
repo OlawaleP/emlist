@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { useRouter } from "next/navigation";
 
 import { AuthContext } from "@/lib/context/AuthState";
@@ -10,31 +10,39 @@ import { useToast } from "@/lib/hooks/useToast";
 
 export const useCompare = () => {
   const router = useRouter();
+  const { showToast } = useToast();
   const { currentUser } = useContext(AuthContext);
   const { reFetchComparedBusinesses } = useContext(CompareContext);
 
-  const { showToast } = useToast();
+  const [isComparing, setIsComparing] = useState(false);
 
-  const compare = async (serviceId: string) => {
+  const compare = async (
+    serviceId: string,
+    reFetchAllBusinesses?: () => void
+  ) => {
     if (!currentUser) {
       return router.push(ROUTES?.LOGIN);
     }
-
+    setIsComparing(true);
     try {
       await axiosInstance.patch(`/business/compare-business/${serviceId}`);
       showToast({
-        message: "Business successfully added to compare!",
+        message: "Compare business list updated!",
         type: "success",
         autoClose: false,
       });
       reFetchComparedBusinesses();
+      if (reFetchAllBusinesses) reFetchAllBusinesses();
     } catch (error) {
       console.log("error adding business to compare", error);
       promiseErrorFunction(error, showToast);
+    } finally {
+      setIsComparing(false);
     }
   };
 
   return {
     compare,
+    isComparing,
   };
 };

@@ -12,7 +12,7 @@ import { getCurrencySign } from "@/lib/helpers/getCurrencySign";
 interface ServiceViewCardProps {
   handleLike: (id: string) => void;
   handleUnlike: (id: string) => void;
-  compare: (id: string) => Promise<void>;
+  compare: (id: string) => void;
   expert: any;
 }
 
@@ -42,7 +42,7 @@ const ServiceViewCard = ({
           className="md:col-span-1 col-span-2 object-contain w-full sm:h-36  h-28 rounded-lg shadow px-2  max-sm:hidden"
         />
       )}
-      <div className="col-span-4 flex justify-between max-md:flex-col md:gap-10 gap-2 max-sm:px-2">
+      <div className="sm:col-span-4 col-span-6 flex justify-between max-md:flex-col md:gap-10 gap-2 max-sm:px-2">
         <ServiceCardInfo expert={expert} />
         <div className="flex flex-col sm:items-end max-sm:items-start justify-between">
           <div className="flex sm:flex-col max-sm:items-center gap-1">
