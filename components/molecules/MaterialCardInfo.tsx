@@ -2,11 +2,11 @@ import Link from "next/link";
 
 import { Capitalize } from "@/lib/helpers";
 import { MaterialInfoProps } from "@/types";
+import { ROUTES } from "@/lib/constants/routes";
 
 import ReadMore from "./ReadMore";
 import Rating from "./Rating";
 import DisplayCardPrice from "../atoms/DisplayCardPrice";
-import { ROUTES } from "@/lib/constants/routes";
 
 const MaterialCardInfo: React.FC<MaterialInfoProps> = ({ material }) => {
   return (

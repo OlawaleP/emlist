@@ -12,6 +12,7 @@ export const useGetBusinesses = (
   const [currentPage, setCurrentPage] = useState(1);
   const [totalPages, setTotalPages] = useState(0);
   const [loading, setLoading] = useState(true);
+  const [isFetching, setIsFetching] = useState(true);
   const [search, setSearch] = useState("");
   const [currency, setCurrency] = useState("");
   const [totalBusinesses, setTotalBusinesses] = useState(0);
@@ -47,8 +48,6 @@ export const useGetBusinesses = (
   };
 
   const fetchBusinesses = async () => {
-    if (!hasMore) return;
-
     setLoading(true);
     try {
       const {
@@ -80,6 +79,7 @@ export const useGetBusinesses = (
       console.error("Failed to fetch businesses:", error);
     } finally {
       setLoading(false);
+      setIsFetching(false);
     }
   };
 
@@ -118,6 +118,8 @@ export const useGetBusinesses = (
     totalBusinesses,
     currency,
     setCurrency,
+    isFetching,
+    setIsFetching,
     reFetchAllBusinesses: fetchBusinesses,
   };
 };

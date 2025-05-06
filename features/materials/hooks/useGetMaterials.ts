@@ -35,7 +35,9 @@ export const useGetMaterials = (material?: string, locationQuery?: string) => {
   const handleMaxChange = (value: number) => {
     setMaxValue(Math.max(value, minValue));
   };
+
   const fetchAllMaterials = async () => {
+    setLoading(true);
     try {
       const {
         products: newProducts,
@@ -55,7 +57,7 @@ export const useGetMaterials = (material?: string, locationQuery?: string) => {
       setTotalProducts(totalProducts);
       setData((prev) => [...prev, ...newProducts]);
       setTotalPages(totalPages);
-      if (currentPage >= newProducts) {
+      if (currentPage >= totalPages) {
         setHasMore(false);
       }
     } catch (error: any) {
