@@ -36,7 +36,7 @@ const CustomModal: React.FC<CustomModalProps> = ({
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
       <div
-        className={`relative mx-4 w-full rounded-lg bg-white p-6 shadow-xl sm:mx-auto sm:p-8 ${widthClasses[width]}`}
+        className={`relative mx-4 w-full rounded-lg bg-white p-3 shadow-xl sm:mx-auto sm:p-4 ${widthClasses[width]}`}
       >
         <button
           className="absolute right-4 top-4 text-gray-500 hover:text-gray-700 p-2 rounded-full  bg-gray-100"
@@ -58,7 +58,7 @@ const CustomModal: React.FC<CustomModalProps> = ({
             />
           </svg>
         </button>
-        <div className="max-h-[80vh] overflow-y-auto hide-scroll">
+        <div className="max-h-[80vh] overflow-y-auto hide-scrollbar">
           {children}
         </div>
       </div>

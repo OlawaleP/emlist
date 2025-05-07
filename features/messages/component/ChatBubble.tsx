@@ -10,7 +10,7 @@ export const ChatBubble = ({
   const shakeClass = message.shouldShake ? "shake" : "";
   return (
     <div
-      className={`chat-bubble ${
+      className={`chat-bubble rounded-2xl ${
         isSentByCurrentUser
           ? "bg-[#054753] text-[#FCFEFD]"
           : "bg-[#ECECEC] text-[#1d231f]"
