@@ -28,12 +28,12 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Emilist: Discover Your Project Dream Team Here",
     description:
-      "Join Emilist to find or post jobs, manage projects,  register your service and buy materials seamlessly.",
+      "Join Emilist to find or post jobs, manage projects, register your service and buy materials seamlessly.",
     url: "https://emilist.com",
     siteName: "Emilist",
     images: [
       {
-        url: "https://emilist.com/images/Logo.svg",
+        url: "https://emilist.netlify.app/images/home.png",
         width: 1200,
         height: 630,
         alt: "Emilist Platform Preview",
@@ -47,7 +47,7 @@ export const metadata: Metadata = {
     title: "Emilist: Find & Post Jobs, Projects, and Materials",
     description:
       "Discover jobs, projects, and materials on Emilist, the ultimate freelance platform.",
-    images: ["https://emilist.com/images/Logo.svg"],
+    images: ["https://emilist.netlify.app/images/home.png"],
   },
   alternates: {
     canonical: "https://emilist.com",
