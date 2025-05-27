@@ -13,7 +13,7 @@ import { useUnlikeBusiness } from "@/features/services/hooks/useUnLikeBusiness";
 
 import PageLoader from "../atoms/PageLoader";
 import CompareSearch from "../molecules/CompareSearch";
-import PublicExpertInfoProfile from "../molecules/PublicExpertInfoProfile";
+import PublicExpertInfoProfile from "./PublicExpertInfoProfile";
 import WhiteBgLoader from "../atoms/WhiteBgLoader";
 
 const PublicExpertInfoWrapper = ({ businessId }: { businessId: string }) => {
@@ -61,11 +61,11 @@ const PublicExpertInfoWrapper = ({ businessId }: { businessId: string }) => {
     setOpenModal(true);
   };
 
+  const loader = isLoad || isLoading || isComparing;
+
   return (
     <div className="pt-10 padding-ctn">
-      {isLoad && <WhiteBgLoader />}
-      {isLoading && <WhiteBgLoader />}
-      {isComparing && <WhiteBgLoader />}
+      {loader && <WhiteBgLoader />}
       {loading ? (
         <PageLoader height="h-[80vh]" />
       ) : (
