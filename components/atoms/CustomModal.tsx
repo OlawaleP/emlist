@@ -39,7 +39,7 @@ const CustomModal: React.FC<CustomModalProps> = ({
         className={`relative mx-4 w-full rounded-lg bg-white p-3 shadow-xl sm:mx-auto sm:p-4 ${widthClasses[width]}`}
       >
         <button
-          className="absolute right-4 top-4 text-gray-500 hover:text-gray-700 p-2 rounded-full  bg-gray-100"
+          className="text-gray-500 hover:text-gray-700 p-2 rounded-full float-end bg-gray-100"
           onClick={onClose}
           aria-label="Close modal"
         >
