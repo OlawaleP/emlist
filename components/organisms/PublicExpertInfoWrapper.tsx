@@ -15,6 +15,8 @@ import PageLoader from "../atoms/PageLoader";
 import CompareSearch from "../molecules/CompareSearch";
 import PublicExpertInfoProfile from "./PublicExpertInfoProfile";
 import WhiteBgLoader from "../atoms/WhiteBgLoader";
+import ShareLink from "../molecules/ShareLink";
+import PublicExpertMainContent from "./PublicExpertMainContent";
 
 const PublicExpertInfoWrapper = ({ businessId }: { businessId: string }) => {
   const router = useRouter();
@@ -82,6 +84,19 @@ const PublicExpertInfoWrapper = ({ businessId }: { businessId: string }) => {
             handleLike={handleLike}
             handleUnlike={handleUnlike}
             handleCompare={handleCompare}
+          />
+          <PublicExpertMainContent
+            handleOpenModal={handleOpenModal}
+            serviceInfo={serviceInfo?.business}
+          />
+
+          <ShareLink
+            handleCancel={() => setOpenShareModal(false)}
+            isModalOpen={openShareModal}
+            link={`https://emilist.com/expert/info/${businessId}`}
+            title="Share business"
+            textToCopy="Check out this business on Emilist"
+            id={businessId}
           />
         </>
       )}

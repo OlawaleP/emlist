@@ -117,3 +117,40 @@ input[type="number"] {
     width: 0%;
   }
 }
+
+/* share referral code modal */
+.share-referral {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 20px !important;
+}
+
+.share-referral .react-share__ShareButton {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.share-referral button {
+  background-color: transparent;
+  font-size: 14px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease-out;
+}
+
+.share-referral svg {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+/* SHAKE ANIMATION ON HORIZONTAL DIRECTION */
+.shake {
+  animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) 0.2s both;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
