@@ -1,9 +1,9 @@
+import CustomButton from "../atoms/CustomButton";
 import ImageSlider from "../molecules/Sliders/ImageSlider";
 import ReadMore from "../molecules/ReadMore";
 
 import { getCurrencySign } from "@/lib/helpers/getCurrencySign";
 import { numberWithCommas } from "@/lib/helpers";
-import CustomButton from "../atoms/CustomButton";
 
 type Props = {
   handleOpenModal: () => void;
@@ -49,7 +49,6 @@ const PublicExpertMainContent = ({ handleOpenModal, serviceInfo }: Props) => {
             </div>
             <div className="w-full flex items-center justify-center">
               <CustomButton onClick={handleOpenModal} className="w-full">
-                {" "}
                 Contact Me
               </CustomButton>
             </div>
