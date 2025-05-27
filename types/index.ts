@@ -98,6 +98,7 @@ export interface FavoriteButtonProps {
   liked: boolean;
   onSave: () => void;
   onUnsave: () => void;
+  show?: boolean;
 }
 
 export interface ReadMoreProps {
@@ -191,4 +192,9 @@ export interface FilterServiceWrapperProps {
 
 export interface FetchDataType {
   fetchData: () => Promise<void>;
+}
+
+export interface ProfileInitialProps {
+  initial: string;
+  className: string;
 }
