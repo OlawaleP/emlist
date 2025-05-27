@@ -19,8 +19,6 @@ const ContactExpertModal = ({
   onClose,
   user,
 }: ContactExpertModalProps) => {
-  const userId = user?._id;
-
   const { onlineUsers } = useSocketContext();
 
   return (

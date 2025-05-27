@@ -17,6 +17,7 @@ import PublicExpertInfoProfile from "./PublicExpertInfoProfile";
 import WhiteBgLoader from "../atoms/WhiteBgLoader";
 import ShareLink from "../molecules/ShareLink";
 import PublicExpertMainContent from "./PublicExpertMainContent";
+import ContactExpertModal from "./modal/ContactExpertModal";
 
 const PublicExpertInfoWrapper = ({ businessId }: { businessId: string }) => {
   const router = useRouter();
@@ -97,6 +98,11 @@ const PublicExpertInfoWrapper = ({ businessId }: { businessId: string }) => {
             title="Share business"
             textToCopy="Check out this business on Emilist"
             id={businessId}
+          />
+          <ContactExpertModal
+            isOpen={openModal}
+            onClose={() => setOpenModal(false)}
+            user={serviceInfo?.business?.userId}
           />
         </>
       )}
