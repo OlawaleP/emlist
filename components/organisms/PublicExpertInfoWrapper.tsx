@@ -21,6 +21,9 @@ import PublicExpertMainContent from "./PublicExpertMainContent";
 import ContactExpertModal from "./modal/ContactExpertModal";
 import PublicExpertReviewsHeader from "./PublicExpertReviewsHeader";
 import PublicExpertReviewSlider from "./PublicExpertReviewSlider";
+import PublicBusinessOwnerInfo from "./PublicBusinessOwnerInfo";
+import ReviewSliderLoader from "../molecules/skeletonLoaders/ReviewSliderLoader";
+import BusinessProfile from "./BusinessProfile";
 
 const PublicExpertInfoWrapper = ({ businessId }: { businessId: string }) => {
   const router = useRouter();
@@ -33,7 +36,10 @@ const PublicExpertInfoWrapper = ({ businessId }: { businessId: string }) => {
   const { handleUnlikeBusiness, isLoad } = useUnlikeBusiness();
   const { loading, refetchServiceInfo, serviceInfo } =
     useGetServiceInfo(businessId);
-  const { data, isLoading: isFetching, getReviews } = useGetBusinessReviews();
+  const { data, isLoading: isFetching } = useGetBusinessReviews(
+    businessId,
+    "mostRecent"
+  );
 
   const [openModal, setOpenModal] = useState<boolean>(false);
   const [openShareModal, setOpenShareModal] = useState<boolean>(false);
@@ -95,7 +101,19 @@ const PublicExpertInfoWrapper = ({ businessId }: { businessId: string }) => {
             serviceInfo={serviceInfo?.business}
           />
           <PublicExpertReviewsHeader data={data} businessId={businessId} />
-          <PublicExpertReviewSlider reviews={data} />
+          {isFetching ? (
+            <ReviewSliderLoader />
+          ) : (
+            <PublicExpertReviewSlider reviews={data} />
+          )}
+          <PublicBusinessOwnerInfo
+            serviceInfo={serviceInfo?.business}
+            handleOpenModal={handleOpenModal}
+          />
+          <BusinessProfile
+            handleOpenModal={handleOpenModal}
+            serviceInfo={serviceInfo?.business}
+          />
           <ShareLink
             handleCancel={() => setOpenShareModal(false)}
             isModalOpen={openShareModal}

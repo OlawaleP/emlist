@@ -11,7 +11,7 @@ interface MainImageProps {
 
 const MainImage = ({ src, alt, onPrev, onNext }: MainImageProps) => {
   return (
-    <div className="w-[676px] h-[413px] max-sm:w-[320px] max-sm:min-w-full max-sm:h-[226px] relative">
+    <div className="w-[676px] h-[413px] max-sm:w-full max-sm:min-w-full max-sm:h-[226px] relative max-sm:px-4">
       <Image
         src={src}
         alt={alt}

@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 
 import ArrowButton from "../atoms/ArrowButton";
 import RatingProfileCard from "../molecules/RatingProfileCard";
+import NoMoreMessage from "../atoms/NoMoreMessage";
 
 const PublicExpertReviewSlider = ({ reviews }: any) => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -26,6 +27,10 @@ const PublicExpertReviewSlider = ({ reviews }: any) => {
       (prevIndex) => (prevIndex - 1 + totalReviews) % totalReviews
     );
   };
+
+  if (reviews?.length < 1) {
+    return <NoMoreMessage message="No review for this business" />;
+  }
 
   return (
     <section className="relative max-w-[676px] w-full shadow rounded-lg">
@@ -72,13 +77,13 @@ const PublicExpertReviewSlider = ({ reviews }: any) => {
         extraStyle="p-2"
       />
       <RatingProfileCard
-        name="Mike Kane"
-        userName=""
-        rating={4}
-        description="Find your project dream team today. Start by browsing profiles of artisans and handymen, and hire the experts who will bring your vision to life."
+        name={reviews[currentIndex]?.userId?.fullName}
+        userName={reviews[currentIndex]?.userId?.userName}
+        rating={reviews[currentIndex].rating}
+        description={reviews[currentIndex].comment}
         profileImage={{
-          src: "/dummyImages/profilePic.png",
-          alt: "profile picture",
+          src: reviews[currentIndex].userId?.profileImage,
+          alt: "Expert profile picture",
         }}
       />
     </section>

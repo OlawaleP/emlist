@@ -19,3 +19,9 @@ export const hasLetter = (str: string) => {
   if (typeof str !== "string") return false;
   return str.trim().length > 0;
 };
+
+export const convertDateFormat = (oldDate: Date): string => {
+  let date = new Date(oldDate).toString().split(" ");
+  let newFormat = ` ${date[2]}  ${date[1]}, ${date[3]}`;
+  return newFormat;
+};
