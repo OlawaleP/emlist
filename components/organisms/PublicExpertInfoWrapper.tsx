@@ -10,6 +10,7 @@ import { useGetServiceInfo } from "@/features/services/hooks/useGetServiceInfo";
 import { useCompare } from "@/features/services/hooks/useCompare";
 import { useLikeBusiness } from "@/features/services/hooks/useLikeBusiness";
 import { useUnlikeBusiness } from "@/features/services/hooks/useUnLikeBusiness";
+import { useGetBusinessReviews } from "@/features/services/hooks/useGetBusinessReviews";
 
 import PageLoader from "../atoms/PageLoader";
 import CompareSearch from "../molecules/CompareSearch";
@@ -18,6 +19,8 @@ import WhiteBgLoader from "../atoms/WhiteBgLoader";
 import ShareLink from "../molecules/ShareLink";
 import PublicExpertMainContent from "./PublicExpertMainContent";
 import ContactExpertModal from "./modal/ContactExpertModal";
+import PublicExpertReviewsHeader from "./PublicExpertReviewsHeader";
+import PublicExpertReviewSlider from "./PublicExpertReviewSlider";
 
 const PublicExpertInfoWrapper = ({ businessId }: { businessId: string }) => {
   const router = useRouter();
@@ -30,6 +33,7 @@ const PublicExpertInfoWrapper = ({ businessId }: { businessId: string }) => {
   const { handleUnlikeBusiness, isLoad } = useUnlikeBusiness();
   const { loading, refetchServiceInfo, serviceInfo } =
     useGetServiceInfo(businessId);
+  const { data, isLoading: isFetching, getReviews } = useGetBusinessReviews();
 
   const [openModal, setOpenModal] = useState<boolean>(false);
   const [openShareModal, setOpenShareModal] = useState<boolean>(false);
@@ -90,7 +94,8 @@ const PublicExpertInfoWrapper = ({ businessId }: { businessId: string }) => {
             handleOpenModal={handleOpenModal}
             serviceInfo={serviceInfo?.business}
           />
-
+          <PublicExpertReviewsHeader data={data} businessId={businessId} />
+          <PublicExpertReviewSlider reviews={data} />
           <ShareLink
             handleCancel={() => setOpenShareModal(false)}
             isModalOpen={openShareModal}

@@ -11,7 +11,7 @@ const PrivateExpertSection: React.FC = () => (
       <h2 className="text-3xl font-bold max-md:text-lg xl:hidden max-xl:max-w-[770px]">
         EmiList Private Expert
       </h2>
-      <div className="flex-1 relative mx-4 w-full max-xl:max-w-[770px]">
+      <div className="flex-1 relative mx-4 w-full max-xl:max-w-[770px] max-xl:mb-6">
         <div className="w-full flex items-center justify-center">
           <Image
             src="/images/workers.svg"

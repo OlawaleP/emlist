@@ -38,6 +38,7 @@ const MainImage = ({ src, alt, onPrev, onNext }: MainImageProps) => {
         }
         onClick={onPrev}
         position="left"
+        extraStyle="w-[68px] h-[68px] max-sm:w-[37px] max-sm:h-[37px] text-2xl"
       />
       <ArrowButton
         icon={
@@ -58,6 +59,7 @@ const MainImage = ({ src, alt, onPrev, onNext }: MainImageProps) => {
         }
         onClick={onNext}
         position="right"
+        extraStyle="w-[68px] h-[68px] max-sm:w-[37px] max-sm:h-[37px] text-2xl"
       />
     </div>
   );

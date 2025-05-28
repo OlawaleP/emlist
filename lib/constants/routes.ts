@@ -25,6 +25,7 @@ export const ROUTES = {
   BUY_MATERIALS: "/buy-materials",
   PRIVATE_EXPERT: "/expert/private-expert",
   JOIN_EXPERT: "/expert/register",
+  EXPERT_REVIEWS: (id: string) => `/expert/reviews/${id}`,
   LIST_NEW_JOB: "/dashboard/job/list-new-job",
   PLANNED_MAINTENANCE: "/dashboard/planned-maintenance",
   DASHBOARD_JOB: "/dashboard/job",
