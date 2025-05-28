@@ -1,15 +1,15 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import { axiosInstance } from "@/lib/api/axiosInstance";
 
-export const useGetBusinessReviews = () => {
+export const useGetBusinessReviews = (businessId: string, sort: string) => {
   const [data, setData] = useState<any>([]);
   const [reviews, setReviews] = useState<any>({});
   const [totalPages, setTotalPages] = useState(1);
   const [currentPage, setCurrentPage] = useState(1);
   const [isLoading, setIsLoading] = useState(false);
 
-  const getReviews = async (businessId: string, sort: string) => {
+  const getReviews = async () => {
     setIsLoading(true);
     try {
       const { data } = await axiosInstance.get(
@@ -30,6 +30,10 @@ export const useGetBusinessReviews = () => {
       setIsLoading(false);
     }
   };
+
+  useEffect(() => {
+    getReviews();
+  }, []);
 
   return {
     data,

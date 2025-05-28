@@ -21,7 +21,7 @@ const ThumbnailImage = ({
       height={122}
       className={`${
         isActive ? "opacity-100" : "opacity-50"
-      } object-cover w-[122px] h-[122px] max-sm:w-[67px] max-sm:h-[67px] rounded-[14px] cursor-pointer`}
+      } object-cover w-[122px] h-[122px] max-sm:w-[67px] max-sm:h-[67px] rounded-[14px] cursor-pointer hover:border-1  hover:border-primary-green transition-all duration-300`}
       onClick={onClick}
     />
   );
