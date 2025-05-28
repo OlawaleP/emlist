@@ -88,7 +88,8 @@ export interface ProfileImageData {
 }
 
 export interface ProfileCardProps {
-  name: string;
+  name?: string;
+  userName?: string;
   rating: number;
   description: string;
   profileImage: ProfileImageData;

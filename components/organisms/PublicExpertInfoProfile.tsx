@@ -25,7 +25,7 @@ const PublicExpertInfoProfile = ({
   const { load, handleBlacklistBuisness } = useBlacklistBusiness();
 
   return (
-    <section className="w-full flex items-end justify-between gap-8 flex-wrap">
+    <section className="w-full flex items-end justify-between sm:gap-8 gap-4 flex-wrap ">
       {load && <WhiteBgLoader />}
       <UserPublicProfile
         profileImage={serviceInfo?.business?.profileImage}
