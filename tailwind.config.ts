@@ -15,8 +15,8 @@ const config: Config = {
         inter: ["Inter", "sans-serif"],
       },
       backgroundImage: {
-        "become-expert-banner": "url('/assets/images/privateExpertBanner.png')",
-        "congrats-banner": "url('/assets/images/congrats.png')",
+        "become-expert-banner": "url('/images/privateExpertBanner.png')",
+        "congrats-banner": "url('/images/congrats.png')",
         "footer-texture": "url('/img/footer-texture.png')",
         "primary-gradient": "linear-gradient(90deg, #3ad87e 0%, #9ef769 100%)",
       },
