@@ -1,7 +1,12 @@
-import React from "react";
+import PrivateExpertHeroBanner from "@/components/molecules/PrivateExpertHeroBanner";
+import MainLayout from "@/components/templates/MainLayout";
 
 const PrivateExpertPage = () => {
-  return <div>PrivateExpertPage</div>;
+  return (
+    <MainLayout>
+      <PrivateExpertHeroBanner />
+    </MainLayout>
+  );
 };
 
 export default PrivateExpertPage;
