@@ -199,3 +199,17 @@ export interface ProfileInitialProps {
   initial: string;
   className: string;
 }
+
+export interface HiringDetails {
+  fullName: string;
+  phoneNumber: string;
+  email: string;
+  privateExpertType: string;
+  jobDetails: string;
+  location: string;
+}
+
+export interface optionsType {
+  label: string;
+  value: number | string;
+}

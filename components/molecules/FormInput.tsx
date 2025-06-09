@@ -21,7 +21,9 @@ export const FormInput = ({
   name,
 }: FormInputProps) => (
   <div className="w-full space-y-1">
-    <Label htmlFor={id}>{label}</Label>
+    <Label htmlFor={id} className="capitalize">
+      {label}
+    </Label>
     <Input
       id={id}
       type={type}
