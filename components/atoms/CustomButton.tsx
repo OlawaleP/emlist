@@ -25,7 +25,7 @@ const CustomButton: React.FC<ButtonProps> = ({
         isDisabled || loading
           ? "cursor-not-allowed opacity-65"
           : "hover:bg-green-500"
-      } ${loading ? "sm:min-w-40 min-w-32" : ""}`}
+      }`}
     >
       {loading ? <span className="btn-loader" /> : children}
     </button>

@@ -23,7 +23,10 @@
     @apply flex items-center;
   }
   .custom-btn {
-    @apply bg-primary-green text-white whitespace-nowrap transition-all duration-300 rounded-lg px-6 h-11 text-center max-sm:text-sm;
+    @apply bg-primary-green text-white whitespace-nowrap transition-all duration-300 rounded-lg px-6 h-11 text-center max-sm:text-sm sm:min-w-40 min-w-32;
+  }
+  .expert-dark-reg-input {
+    @apply min-w-full w-full  max-w-full rounded-lg h-10 px-2 text-gray-100 bg-gray-500 focus:outline-none focus:border-primary-green focus:border-1 max-sm:text-sm;
   }
 }
 

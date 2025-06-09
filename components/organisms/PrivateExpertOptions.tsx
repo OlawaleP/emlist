@@ -1,8 +1,33 @@
+"use client";
+
 import Image from "next/image";
 
+import HireExpertModal from "./modal/HireExpertModal";
+import PrivateImg from "./../../public/images/privateExpertImg.png";
+
+import { useHirePrivateExpert } from "@/features/services/hooks/useHirePrivateExpert";
+import CustomButton from "../atoms/CustomButton";
+
 const PrivateExpertOptions = () => {
+  const {
+    handleSubmit,
+    handleFileChange,
+    handleChnage,
+    loading,
+    hiringDetails,
+    selectedImage,
+    setIsOpen,
+    isOpen,
+    onCancel,
+    handleDelete,
+    handleAddDate,
+    handleRemoveDate,
+    availability,
+    handleInputChange,
+  } = useHirePrivateExpert();
+
   return (
-    <section className="padding-x padding-y">
+    <section className="padding-ctn pt-16">
       {/* Modal for hiring expert */}
       <HireExpertModal
         handleSubmit={handleSubmit}
@@ -25,10 +50,11 @@ const PrivateExpertOptions = () => {
         </h4>
         <div className="flex-1">
           <Image
-            src="/assets/images/privateExpertImg.png"
-            alt="logo"
+            src={PrivateImg}
+            alt="private expert"
             width={610}
             height={340}
+            placeholder="blur"
             className="object-cover w-[610px] h-[340px] rounded-xl max-sm:w-full max-sm:h-[220px]"
           />
         </div>
@@ -44,9 +70,9 @@ const PrivateExpertOptions = () => {
             agreements, qualifications, and certifications
           </p>
           <div className="w-full flex max-md:justify-center">
-            <button className="custom-btn" onClick={() => setIsOpen(true)}>
+            <CustomButton type="button" onClick={() => setIsOpen(true)}>
               Register Now
-            </button>
+            </CustomButton>
           </div>
         </div>
       </div>

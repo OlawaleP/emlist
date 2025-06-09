@@ -208,3 +208,8 @@ export interface HiringDetails {
   jobDetails: string;
   location: string;
 }
+
+export interface optionsType {
+  label: string;
+  value: number | string;
+}
