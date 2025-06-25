@@ -3,8 +3,8 @@ import CustomButton from "../atoms/CustomButton";
 
 const RegistrationGuide = () => {
   return (
-    <div className="pt-24 h-screen max-h-screen bg-[#054753] text-white w-[500px] max-md:w-full max-md:pb-24 md:fixed">
-      <div className="padding-y pr-8 max-sm:mt-10 ">
+    <div className=" lg:h-screen lg:max-h-screen h-fit bg-[#054753] text-white w-[500px] max-lg:w-full lg:fixed flex items-center py-10">
+      <div className=" pr-8 ">
         <h1 className="font-bold text-3xl padding-l-ctn max-sm:text-xl">
           Grow your business with Emilist
         </h1>
@@ -58,7 +58,7 @@ const RegistrationGuide = () => {
             </div>
           </div>
         </div>
-        <div className="w-full flex-c justify-center mt-10 md:hidden">
+        <div className="w-full flex-c justify-center mt-10 lg:hidden">
           <CustomButton href="#new-expert">Proceed</CustomButton>
         </div>
       </div>

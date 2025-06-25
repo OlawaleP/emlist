@@ -59,7 +59,7 @@ const RegisterServiceScreenTwo = ({
   };
 
   return (
-    <div className="w-full mt-10 max-md:mt-5 space-y-4 sm:px-10 px-4 max-w-4xl">
+    <div className="w-full pt-24 pb-14  space-y-4 sm:px-10 px-4 max-w-4xl h-fit">
       <RegisterServiceTitle title="Lets get to know you" />
       <RegisterServiceDescription>
         Fill out the business or service profile information below
@@ -140,7 +140,7 @@ const RegisterServiceScreenTwo = ({
             id="bio"
             name="bio"
             label="Bio"
-            rows={5}
+            rows={4}
             value={expertInfo?.bio}
             onChange={handleChange}
           />
