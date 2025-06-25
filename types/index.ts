@@ -11,6 +11,8 @@ export interface ToastState {
   autoClose?: boolean;
 }
 
+export type ShowToastFunction = (options: ToastState) => void;
+
 export interface NavItemProps {
   label: string;
   onClick: () => void;
@@ -212,4 +214,14 @@ export interface HiringDetails {
 export interface optionsType {
   label: string;
   value: number | string;
+}
+
+export interface RegisterExpertInfoType {
+  firstName: string;
+  lastName: string;
+  phoneNumber: string;
+  city: string;
+  address: string;
+  bio: string;
+  state: string;
 }

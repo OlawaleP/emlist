@@ -164,3 +164,32 @@ export const noticePeriodOptions = [
 ];
 
 export const currencies = ["NGN", "USD", "EUR", "GBP"];
+
+export const languages = [
+  "English",
+  "Spanish",
+  "French",
+  "German",
+  "Chinese",
+  "Arabic",
+  "Russian",
+  "Portuguese",
+  "Japanese",
+  "Korean",
+  "Italian",
+  "Dutch",
+  "Swedish",
+  "Afrikaans",
+  "Albanian",
+  "Amharic",
+  "Azerbaijani",
+  "Bengali",
+  "Burmese",
+  "Catalan",
+  "Czech",
+  "Danish",
+  "Estonian",
+  "Igbo",
+  "Hausa",
+  "Yoruba",
+];
