@@ -8,9 +8,7 @@ import RegisterServiceTitle from "../atoms/RegisterServiceTitle";
 import MultiSelectDropdown from "./MultiSelectDropdown";
 
 import { serviceList } from "@/lib/constants";
-import { ToastState } from "@/types";
-
-type ShowToastFunction = (options: ToastState) => void;
+import { ShowToastFunction } from "@/types";
 
 interface RegisterServiceScreenOneProps {
   services: string[];
@@ -60,7 +58,7 @@ const RegisterServiceScreenOne = ({
           />
         </div>
         <div className="flex justify-end  max-sm:justify-center">
-          <CustomButton onClick={handleProceed}>Proceed</CustomButton>
+          <CustomButton onClick={handleProceed}>Next</CustomButton>
         </div>
       </div>
     </div>
