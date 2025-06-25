@@ -36,7 +36,10 @@ const RegisterServiceScreenOne = ({
   };
 
   return (
-    <div className="max-w-[550px] mx-10 mt-20 max-md:mt-10 max-sm:mx-4 space-y-4">
+    <div
+      id="new-expert"
+      className="max-w-[550px] mx-10 pt-28 max-sm:mx-4 space-y-4 h-screen"
+    >
       <RegisterServiceTitle title="Create Expert Service Account" />
       <RegisterServiceDescription>
         EmiList employers and customers want to hire your services. Tell the

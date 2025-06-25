@@ -18,7 +18,7 @@ const RegisterServiceLayout = ({ children }: { children: React.ReactNode }) => {
             currentUser?.userName)?.[0]?.toUpperCase() || "E"}
         </div>
       </DynamicNav>
-      <div className="max-md:hidden">
+      <div className="max-lg:hidden">
         <RegistrationGuide />
       </div>
       {children}

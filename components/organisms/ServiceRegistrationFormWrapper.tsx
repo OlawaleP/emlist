@@ -33,21 +33,22 @@ const ServiceRegistrationFormWrapper = () => {
   };
 
   return (
-    <div className="pt-20 max-md:pt-10 max-md:pb-15 flex">
-      <div className="w-[500px] max-md:hidden" />
+    <div className="flex">
+      <div className="w-[500px] max-lg:hidden" />
       <div className="flex-1 w-full overflow-x-hidden">
         {currentScreen === 1 && (
-          <>
-            <div className="w-full md:hidden h-full">
+          <div className="flex flex-col max-lg:pt-14">
+            <div className="w-full lg:hidden h-full">
               <RegistrationGuide />
             </div>
+
             <RegisterServiceScreenOne
               services={services}
               setServices={setServices}
               nextScreen={nextScreen}
               showToast={showToast}
             />
-          </>
+          </div>
         )}
         {currentScreen === 2 && (
           <RegisterServiceScreenTwo
