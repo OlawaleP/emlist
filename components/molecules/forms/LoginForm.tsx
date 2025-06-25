@@ -1,10 +1,7 @@
 "use client";
 
-import Link from "next/link";
-
 import { FormInput } from "../FormInput";
 import { PasswordInput } from "../PasswordInput";
-import { ROUTES } from "@/lib/constants/routes";
 import { useLogin } from "@/features/auth/hooks/useLogin";
 
 import CustomButton from "@/components/atoms/CustomButton";

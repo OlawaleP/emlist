@@ -1,7 +1,12 @@
-import React from "react";
+import ServiceRegistrationFormWrapper from "@/components/organisms/ServiceRegistrationFormWrapper";
+import RegisterServiceLayout from "@/components/templates/RegisterServiceLayout";
 
 const RegisterServicePage = () => {
-  return <div>RegisterServicePage</div>;
+  return (
+    <RegisterServiceLayout>
+      <ServiceRegistrationFormWrapper />
+    </RegisterServiceLayout>
+  );
 };
 
 export default RegisterServicePage;
