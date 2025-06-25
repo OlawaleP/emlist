@@ -3,7 +3,7 @@ import CustomButton from "../atoms/CustomButton";
 
 const RegistrationGuide = () => {
   return (
-    <div className=" lg:h-screen lg:max-h-screen h-fit bg-[#054753] text-white w-[500px] max-lg:w-full lg:fixed flex items-center py-10">
+    <div className=" lg:h-screen lg:max-h-screen h-fit min-h-screen bg-[#054753] text-white w-[500px] max-lg:w-full lg:fixed flex items-center py-10">
       <div className=" pr-8 ">
         <h1 className="font-bold text-3xl padding-l-ctn max-sm:text-xl">
           Grow your business with Emilist
