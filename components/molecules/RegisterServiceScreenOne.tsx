@@ -61,7 +61,9 @@ const RegisterServiceScreenOne = ({
           />
         </div>
         <div className="flex justify-end  max-sm:justify-center">
-          <CustomButton onClick={handleProceed}>Next</CustomButton>
+          <CustomButton href="#expert-profile" onClick={handleProceed}>
+            Next
+          </CustomButton>
         </div>
       </div>
     </div>
