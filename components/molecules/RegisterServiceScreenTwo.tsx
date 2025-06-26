@@ -62,7 +62,7 @@ const RegisterServiceScreenTwo = ({
   return (
     <div
       id="expert-profile"
-      className="w-full pt-24 pb-14  space-y-4 sm:px-10 px-4 max-w-4xl h-fit"
+      className="w-full pt-24 pb-14 space-y-4 sm:px-10 px-4 max-w-4xl h-fit"
     >
       <RegisterServiceTitle title="Lets get to know you" />
       <RegisterServiceDescription>
@@ -159,8 +159,12 @@ const RegisterServiceScreenTwo = ({
         </div>
       </div>
       <div className="flex gap-2 justify-end  max-sm:justify-center">
-        <CustomButton onClick={prevScreen}>Back</CustomButton>
-        <CustomButton onClick={handleProceed}>Next</CustomButton>
+        <CustomButton href="#new-expert" onClick={prevScreen}>
+          Back
+        </CustomButton>
+        <CustomButton href="#expert-profile-pic" onClick={handleProceed}>
+          Next
+        </CustomButton>
       </div>
     </div>
   );

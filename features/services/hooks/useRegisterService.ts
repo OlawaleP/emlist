@@ -5,6 +5,7 @@ import { RegisterExpertInfoType } from "@/types";
 export const useRegisterService = () => {
   const [services, setServices] = useState<string[]>([]);
   const [selectedLanguage, setSelectedLanguage] = useState<string[]>([]);
+  const [profileImage, setProfileImage] = useState<File | null>(null);
   const [selectedCountry, setSelectedCountry] = useState<string>("");
   const [expertInfo, setExpertInfo] = useState<RegisterExpertInfoType>({
     firstName: "",
@@ -35,5 +36,7 @@ export const useRegisterService = () => {
     setSelectedCountry,
     selectedLanguage,
     setSelectedLanguage,
+    profileImage,
+    setProfileImage,
   };
 };
