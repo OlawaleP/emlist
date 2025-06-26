@@ -2,9 +2,9 @@ import { ShowToastFunction } from "@/types";
 
 import RegisterServiceDescription from "../atoms/RegisterServiceDescription";
 import RegisterServiceTitle from "../atoms/RegisterServiceTitle";
-import CustomButton from "../atoms/CustomButton";
 import ProfileImageGuide from "./ProfileImageGuide";
 import RegisterServiceProfileImageInput from "./RegisterServiceProfileImageInput";
+import NavigationButtons from "./NavigationButtons";
 
 interface RegisterServiceScreenThreeProps {
   profileImage: File | null;
@@ -27,7 +27,6 @@ const RegisterServiceScreenThree = ({
       const validExtensions = ["image/jpeg", "image/jpg", "image/png"];
       const maxSizeInMB = 2 * 1024 * 1024; //2MB
 
-      // Check file size
       if (file.size > maxSizeInMB) {
         showToast({
           message: "File exceeds the 3MB size limit.",
@@ -84,14 +83,12 @@ const RegisterServiceScreenThree = ({
         />
         <ProfileImageGuide />
       </div>
-      <div className="flex gap-2 justify-end pt-6 max-sm:justify-center">
-        <CustomButton href="#new-expert" onClick={prevScreen}>
-          Back
-        </CustomButton>
-        <CustomButton href="#expert-profile-pic" onClick={handleProceed}>
-          Next
-        </CustomButton>
-      </div>
+      <NavigationButtons
+        prevHref="#expert-profil"
+        onPrev={prevScreen}
+        nextHref="#business-profile"
+        onNext={handleProceed}
+      />
     </div>
   );
 };

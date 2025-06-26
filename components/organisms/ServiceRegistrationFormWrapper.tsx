@@ -9,6 +9,7 @@ import RegisterServiceScreenOne from "../molecules/RegisterServiceScreenOne";
 import RegistrationGuide from "../molecules/RegistrationGuide";
 import RegisterServiceScreenTwo from "../molecules/RegisterServiceScreenTwo";
 import RegisterServiceScreenThree from "../molecules/RegisterServiceScreenThree";
+import RegisterServiceScreenFour from "../molecules/RegisterServiceScreenFour";
 
 const ServiceRegistrationFormWrapper = () => {
   const { showToast } = useToast();
@@ -25,6 +26,8 @@ const ServiceRegistrationFormWrapper = () => {
     setSelectedLanguage,
     profileImage,
     setProfileImage,
+    businessCountry,
+    setBusinessCountry,
   } = useRegisterService();
 
   const nextScreen = () => {
@@ -70,6 +73,17 @@ const ServiceRegistrationFormWrapper = () => {
           <RegisterServiceScreenThree
             profileImage={profileImage}
             setProfileImage={setProfileImage}
+            nextScreen={nextScreen}
+            prevScreen={prevScreen}
+            showToast={showToast}
+          />
+        )}
+        {currentScreen === 4 && (
+          <RegisterServiceScreenFour
+            expertInfo={expertInfo}
+            handleChange={handleChange}
+            businessCountry={businessCountry}
+            setBusinessCountry={setBusinessCountry}
             nextScreen={nextScreen}
             prevScreen={prevScreen}
             showToast={showToast}
