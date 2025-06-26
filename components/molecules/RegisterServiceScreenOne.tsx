@@ -1,8 +1,8 @@
 import { Dispatch, SetStateAction } from "react";
 
-import CustomButton from "../atoms/CustomButton";
 import GuideDescription from "../atoms/GuideDescription";
 import Label from "../atoms/Label";
+import NavigationButtons from "./NavigationButtons";
 import RegisterServiceDescription from "../atoms/RegisterServiceDescription";
 import RegisterServiceTitle from "../atoms/RegisterServiceTitle";
 import MultiSelectDropdown from "./MultiSelectDropdown";
@@ -60,11 +60,7 @@ const RegisterServiceScreenOne = ({
             customPlaceholder="Specify line of work"
           />
         </div>
-        <div className="flex justify-end  max-sm:justify-center">
-          <CustomButton href="#expert-profile" onClick={handleProceed}>
-            Next
-          </CustomButton>
-        </div>
+        <NavigationButtons nextHref="#expert-profile" onNext={handleProceed} />
       </div>
     </div>
   );

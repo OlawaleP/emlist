@@ -224,4 +224,12 @@ export interface RegisterExpertInfoType {
   address: string;
   bio: string;
   state: string;
+  businessName: string;
+  yearFounded: string;
+  employees: string;
+  businessAddress: string;
+  statee: string;
+  startPrice: string;
+  noticePeriod: string;
+  currency: string;
 }
