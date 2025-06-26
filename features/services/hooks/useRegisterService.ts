@@ -5,7 +5,7 @@ import { RegisterExpertInfoType } from "@/types";
 export const useRegisterService = () => {
   const [services, setServices] = useState<string[]>([]);
   const [selectedLanguage, setSelectedLanguage] = useState<string[]>([]);
-  const [selectedCountry, setSelectedCountry] = useState<string | null>(null);
+  const [selectedCountry, setSelectedCountry] = useState<string>("");
   const [expertInfo, setExpertInfo] = useState<RegisterExpertInfoType>({
     firstName: "",
     lastName: "",

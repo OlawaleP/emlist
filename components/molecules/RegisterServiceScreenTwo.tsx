@@ -1,5 +1,6 @@
 import { Dispatch, SetStateAction } from "react";
 
+import { countries, languages } from "@/lib/constants";
 import { RegisterExpertInfoType, ShowToastFunction } from "@/types";
 
 import CustomButton from "../atoms/CustomButton";
@@ -7,16 +8,16 @@ import RegisterServiceTitle from "../atoms/RegisterServiceTitle";
 import RegisterServiceDescription from "../atoms/RegisterServiceDescription";
 import { FormInput } from "./FormInput";
 import MultiSelectDropdown from "./MultiSelectDropdown";
-import { languages } from "@/lib/constants";
 import Label from "../atoms/Label";
 import FormTextarea from "./FormTextarea";
+import SearchableDropdown from "./SearchableDropdown";
 
 interface RegisterServiceScreenTwoProps {
   expertInfo: RegisterExpertInfoType;
   handleChange: (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => void;
-  selectedCountry: string | null;
+  selectedCountry: string;
   setSelectedCountry: (country: string) => void;
   selectedLanguage: string[];
   setSelectedLanguage: Dispatch<SetStateAction<string[]>>;
@@ -59,7 +60,10 @@ const RegisterServiceScreenTwo = ({
   };
 
   return (
-    <div className="w-full pt-24 pb-14  space-y-4 sm:px-10 px-4 max-w-4xl h-fit">
+    <div
+      id="expert-profile"
+      className="w-full pt-24 pb-14  space-y-4 sm:px-10 px-4 max-w-4xl h-fit"
+    >
       <RegisterServiceTitle title="Lets get to know you" />
       <RegisterServiceDescription>
         Fill out the business or service profile information below
@@ -103,6 +107,14 @@ const RegisterServiceScreenTwo = ({
             options={languages}
             placeholder="Select a language"
             customPlaceholder="Specify"
+          />
+        </div>
+        <div className="input__container space-y-1">
+          <Label htmlFor="country">Country</Label>
+          <SearchableDropdown
+            selectedOption={selectedCountry}
+            setSelectedOption={setSelectedCountry}
+            options={countries}
           />
         </div>
         <div className="input__container ">

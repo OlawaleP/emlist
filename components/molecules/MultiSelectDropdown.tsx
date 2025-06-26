@@ -62,7 +62,7 @@ const MultiSelectDropdown = ({
       <button
         onClick={() => setOpen((prev) => !prev)}
         type="button"
-        className="min-w-full w-full max-w-full rounded-lg min-h-10 px-2 bg-[#ececec]  focus:outline-none focus-within:border-primary-green focus-within:border-1 max-sm:h-12 flex-c-b"
+        className="min-w-full w-full max-w-full rounded-lg min-h-10 px-2 bg-[#ececec]  focus:outline-none focus-within:border-primary-green focus-within:border-1 flex-c-b"
       >
         <div className="flex gap-2 items-center flex-wrap">
           {filteredSelectedOptions.length > 0 ? (
@@ -106,7 +106,7 @@ const MultiSelectDropdown = ({
       </button>
 
       {open && (
-        <div className="absolute right-0 w-full mt-1 origin-top-right bg-white border border-gray-200 rounded-md shadow-lg">
+        <div className="absolute right-0 w-full mt-1 origin-top-right bg-white border border-gray-200 z-10 rounded-md shadow-lg">
           <div className="py-1">
             <ul role="list" className=" w-full max-h-44 overflow-y-auto ">
               {options.map((option: string, index: number) => (
