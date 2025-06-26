@@ -3,12 +3,12 @@ import CustomButton from "../atoms/CustomButton";
 
 const RegistrationGuide = () => {
   return (
-    <div className=" lg:h-screen lg:max-h-screen h-fit min-h-screen bg-[#054753] text-white w-[500px] max-lg:w-full lg:fixed flex items-center py-10">
+    <div className=" lg:h-screen lg:max-h-screen h-fit max-sm:h-screen min-h-screen bg-[#054753] text-white w-[500px] max-lg:w-full lg:fixed flex items-center py-10">
       <div className=" pr-8 ">
         <h1 className="font-bold text-3xl padding-l-ctn max-sm:text-xl">
           Grow your business with Emilist
         </h1>
-        <div className="flex flex-col justify-center mt-10 padding-ctn gap-10">
+        <div className="flex flex-col justify-center mt-10 padding-ctn sm:gap-10 gap-5">
           <div className="flex gap-2">
             <div className="">
               <h2 className="flex-c sm:w-10 sm:h-10 bg-white rounded-full justify-center  font-inter font-semibold sm:text-lg w-8 h-8 text-gray-600">
